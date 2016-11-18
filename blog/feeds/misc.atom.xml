@@ -43,4 +43,44 @@ ctx.lineTo(150,200)
 ctx.strokeStyle = "blue"
 ctx.stroke()
 ctx.closePath()
+&lt;/script&gt;
+
+&lt;p&gt;以下為程式碼:&lt;/p&gt;
+&lt;pre class="brush:python"&gt;
+&lt;!-- 導入 Brython 標準程式庫 --&gt;
+
+&lt;script type="text/javascript" 
+    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js"&gt;
+&lt;/script&gt;
+
+&lt;!-- 啟動 Brython --&gt;
+
+&lt;script&gt;
+window.onload=function(){
+brython(1);
+}
+&lt;/script&gt;
+
+&lt;!-- 以下實際利用  Brython 畫兩條直線 --&gt;
+
+&lt;canvas id="guitar" width="600" height="200"&gt;&lt;/canvas&gt;
+
+&lt;script type="text/python3"&gt;
+from browser import document as doc
+import math
+
+canvas = doc["guitar"]
+ctx = canvas.getContext("2d")
+ctx.beginPath()
+ctx.lineWidth = 1
+inc = 5
+for i in range(10):
+    ctx.moveTo(100+i*inc,100)
+    ctx.lineTo(100+i*inc,200)
+ctx.lineTo(100,100)
+ctx.lineTo(150,200)   
+# 設定顏色為藍色,也可以使用'rgb(0,0,255)" 字串設定顏色值
+ctx.strokeStyle = "blue"
+ctx.stroke()
+ctx.closePath()
 &lt;/script&gt;</summary><category term="使用導引"></category></entry></feed>
