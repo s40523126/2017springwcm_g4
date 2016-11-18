@@ -2,7 +2,7 @@
 <html lang="en"
 >
 <head>
-    <title>Misc - 2016Fall 課程網誌 (虎尾科大MDE)</title>
+    <title>Articles by 40523126 - 2016Fall 課程網誌 (虎尾科大MDE)</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -167,8 +167,7 @@ init_mathjax();
 </script>
 
 
-    <meta name="author" content="KMOL" />
-    <meta name="keywords" content="Misc" />
+        <meta name="author" content="KMOL" />
 
     <!-- Open Graph tags -->
         <meta property="og:site_name" content="2016Fall 課程網誌 (虎尾科大MDE)" />
@@ -256,7 +255,7 @@ init_mathjax();
                          <li><a href="../pages/about/">
                              About
                           </a></li>
-                        <li class="active">
+                        <li >
                             <a href="../category/misc.html">Misc</a>
                         </li>
             </ul>
@@ -286,50 +285,6 @@ init_mathjax();
                 </div>
             </article>
             <hr/>
-            <article>
-                <h2><a href="../2016fall-jian-bao-yu-wang-zhi-xi-tong.html">2016Fall 簡報與網誌系統</a></h2>
-                <div class="summary"><p>這個系統共集結了 reveal.js 網際簡報與 pelican 靜態網誌系統.</p>
-
-                    <a class="btn btn-default btn-xs" href="../2016fall-jian-bao-yu-wang-zhi-xi-tong.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="../brython-hui-tu-jiao-xue.html">Brython 繪圖教學</a></h2>
-                <div class="summary"><p>繪圖流程, 導入程式庫, 啟動, 然後引用各種模組開始繪圖</p>
-
-<!-- 導入 Brython 標準程式庫 -->
-
-<script type="text/javascript" 
-    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js">
-</script>
-
-<!-- 啟動 Brython -->
-
-<script>
-window.onload=function(){
-brython(1);
-}
-</script>
-
-<!-- 以下實際利用  Brython 畫兩條直線 -->
-
-<canvas id="guitar" width="600" height="200"></canvas>
-
-<script type="text/python3">
-from browser import document as doc
-import math
-
-canvas = doc["guitar"]
-ctx = canvas.getContext("2d")
-ctx.beginPath()
-ctx.lineWidth = 1
-inc = 5
-for i in ...</script></!--></!--></!-->
-                    <a class="btn btn-default btn-xs" href="../brython-hui-tu-jiao-xue.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
 
         </div>
         <div class="col-sm-3" id="sidebar">
@@ -343,16 +298,6 @@ for i in ...</script></!--></!--></!-->
                     <li class="list-group-item">
                         <a href="../2016fall-ji-jie-she-ji-ji-suan-ji-cheng-shi-jiao-xue.html">
                             2016Fall 機械設計計算機程式教學
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="../2016fall-jian-bao-yu-wang-zhi-xi-tong.html">
-                            2016Fall 簡報與網誌系統
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="../brython-hui-tu-jiao-xue.html">
-                            Brython 繪圖教學
                         </a>
                     </li>
                 </ul>
