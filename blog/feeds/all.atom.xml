@@ -1,5 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>2016Fall 課程網誌 (虎尾科大MDE)</title><link href="./" rel="alternate"></link><link href="./feeds/all.atom.xml" rel="self"></link><id>./</id><updated>2016-12-02T12:00:00+08:00</updated><entry><title>Brython 繪圖教學</title><link href="./brython-hui-tu-jiao-xue.html" rel="alternate"></link><published>2016-12-02T12:00:00+08:00</published><updated>2016-12-02T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:,2016-12-02:./brython-hui-tu-jiao-xue.html</id><summary type="html">&lt;p&gt;繪圖流程, 導入程式庫, 啟動, 然後引用各種模組開始繪圖&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>2016Fall 課程網誌 (虎尾科大MDE)</title><link href="./" rel="alternate"></link><link href="./feeds/all.atom.xml" rel="self"></link><id>./</id><updated>2016-12-02T12:00:00+08:00</updated><entry><title>Brython 繪圖教學 W11</title><link href="./brython-hui-tu-jiao-xue-w11.html" rel="alternate"></link><published>2016-12-02T12:00:00+08:00</published><updated>2016-12-02T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:,2016-12-02:./brython-hui-tu-jiao-xue-w11.html</id><summary type="html">&lt;p&gt;繪圖流程, 導入程式庫, 啟動, 然後引用各種模組開始繪圖&lt;/p&gt;
+
+&lt;!-- 以下實際利用  Brython 畫圖 --&gt;
+
+&lt;canvas id="chord1" width="600" height="400"&gt;&lt;/canvas&gt;
+
+&lt;script type="text/python3"&gt;
+from browser import document as doc
+import math
+
+# 準備繪圖畫布
+canvas = doc["chord1"]
+ctx = canvas.getContext("2d")
+
+# 水平線
+for i in range(5):
+    ctx.beginPath()
+# 設定線的寬度為 1 個單位
+    if i == 0:
+        ctx.lineWidth = 7
+    else:
+        ctx.lineWidth = 1
+    ctx.moveTo(99, 100+i*30)
+    ctx.lineTo(201, 100+i*30)
+    # 設定顏色為藍色, 也可以使用 "rgb(0, 0, 255)" 字串設定顏色值
+    ctx.strokeStyle = "blue"
+    ctx.stroke()
+    ctx.closePath()
+
+# 垂直線
+for i in range(6):
+    ctx.beginPath()
+
+# 設定線的寬度為 1 個單位
+    ctx.lineWidth = 1
+    ctx.moveTo(100+i*20, 100)
+    ctx.lineTo(100+i*20, 220)
+    # 設定顏色為藍色, 也可以使用 "rgb(0, 0, 255)" 字串設定顏色值
+    ctx.strokeStyle = "blue"
+    ctx.stroke()
+    ctx.closePath()
+ctx.closePath()
+
+&lt;/script&gt;</summary><category term="使用導引"></category></entry><entry><title>Brython 繪圖教學</title><link href="./brython-hui-tu-jiao-xue.html" rel="alternate"></link><published>2016-11-18T12:00:00+08:00</published><updated>2016-11-18T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:,2016-11-18:./brython-hui-tu-jiao-xue.html</id><summary type="html">&lt;p&gt;繪圖流程, 導入程式庫, 啟動, 然後引用各種模組開始繪圖&lt;/p&gt;
 
 &lt;!-- 導入 Brython 標準程式庫 --&gt;
 
@@ -75,46 +118,6 @@ ctx.lineTo(150,200)
 # 設定顏色為藍色,也可以使用'rgb(0,0,255)" 字串設定顏色值
 ctx.strokeStyle = "blue"
 ctx.stroke()
-ctx.closePath()
-&lt;/script&gt;</summary><category term="使用導引"></category></entry><entry><title>Brython 繪圖教學 W11</title><link href="./brython-hui-tu-jiao-xue-w11.html" rel="alternate"></link><published>2016-12-02T12:00:00+08:00</published><updated>2016-12-02T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:,2016-12-02:./brython-hui-tu-jiao-xue-w11.html</id><summary type="html">&lt;p&gt;繪圖流程, 導入程式庫, 啟動, 然後引用各種模組開始繪圖&lt;/p&gt;
-
-&lt;!-- 以下實際利用  Brython 畫圖 --&gt;
-
-&lt;canvas id="chord1" width="600" height="400"&gt;&lt;/canvas&gt;
-
-&lt;script type="text/python3"&gt;
-from browser import document as doc
-import math
-# 準備繪圖畫布
-canvas = doc["chord1"]
-ctx = canvas.getContext("2d")
-
-# 水平線
-for i in range(5):
-    ctx.beginPath()
-# 設定線的寬度為 1 個單位
-    if i == 0:
-        ctx.lineWidth = 7
-    else:
-        ctx.lineWidth = 1
-    ctx.moveTo(99, 100+i*30)
-    ctx.lineTo(201, 100+i*30)
-    # 設定顏色為藍色, 也可以使用 "rgb(0, 0, 255)" 字串設定顏色值
-    ctx.strokeStyle = "blue"
-    ctx.stroke()
-    ctx.closePath()
-
-# 垂直線
-for i in range(6):
-    ctx.beginPath()
-# 設定線的寬度為 1 個單位
-    ctx.lineWidth = 1
-    ctx.moveTo(100+i*20, 100)
-    ctx.lineTo(100+i*20, 220)
-    # 設定顏色為藍色, 也可以使用 "rgb(0, 0, 255)" 字串設定顏色值
-    ctx.strokeStyle = "blue"
-    ctx.stroke()
-    ctx.closePath()
 ctx.closePath()
 &lt;/script&gt;</summary><category term="使用導引"></category></entry><entry><title>2016Fall 機械設計計算機程式教學</title><link href="./2016fall-ji-jie-she-ji-ji-suan-ji-cheng-shi-jiao-xue.html" rel="alternate"></link><published>2016-11-18T00:00:00+08:00</published><updated>2016-11-18T00:00:00+08:00</updated><author><name>40523126</name></author><id>tag:,2016-11-18:./2016fall-ji-jie-she-ji-ji-suan-ji-cheng-shi-jiao-xue.html</id><summary type="html">&lt;p&gt;本課程提供學生紮實之物件導向或式概念、Python程式語言訓練，本課程強調程式核心技術之撰寫經驗，包括：決策控制、迴圈、動畫、人機互動、集合與陣列。
 教導機械設計系的學生如何用創造力以及想像力發揮到最好。&lt;/p&gt;</summary><category term="使用導引"></category></entry><entry><title>2016Fall 簡報與網誌系統</title><link href="./2016fall-jian-bao-yu-wang-zhi-xi-tong.html" rel="alternate"></link><published>2016-09-02T12:00:00+08:00</published><updated>2016-09-02T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:,2016-09-02:./2016fall-jian-bao-yu-wang-zhi-xi-tong.html</id><summary type="html">&lt;p&gt;這個系統共集結了 reveal.js 網際簡報與 pelican 靜態網誌系統.&lt;/p&gt;
