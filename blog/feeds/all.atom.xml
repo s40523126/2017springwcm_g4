@@ -26,52 +26,37 @@ import math
 canvas = doc["chord1"]
 ctx = canvas.getContext("2d")
 
-'''
-# 改用 background 函式繪圖
-# 水平線
-for i in range(5):
-    ctx.beginPath()
-# 設定線的寬度為 1 個單位
-    if i == 0:
-        ctx.lineWidth = 7
-    else:
+def background(x, y, xinc, yinc, xnum, ynum, ctx):
+    # 水平線
+    for i in range(ynum+1):
+        ctx.beginPath()
+    # 設定線的寬度為 1 個單位
+        if i == 0:
+            ctx.lineWidth = 7
+        else:
+            ctx.lineWidth = 1
+        ctx.moveTo(x-1, y+i*yinc)
+        ctx.lineTo(x+xnum*xinc+1, y+i*yinc)
+        # 設定顏色為藍色, 也可以使用 "rgb(0, 0, 255)" 字串設定顏色值
+        ctx.strokeStyle = "blue"
+        ctx.stroke()
+        ctx.closePath()
+
+    # 垂直線
+    for i in range(xnum+1):
+        ctx.beginPath()
+    # 設定線的寬度為 1 個單位
         ctx.lineWidth = 1
-    ctx.moveTo(99, 100+i*30)
-    ctx.lineTo(201, 100+i*30)
-    # 設定顏色為藍色, 也可以使用 "rgb(0, 0, 255)" 字串設定顏色值
-    ctx.strokeStyle = "blue"
-    ctx.stroke()
-    ctx.closePath()
+        ctx.moveTo(x+i*xinc, y)
+        ctx.lineTo(x+i*xinc, y+ynum*yinc)
+        # 設定顏色為藍色, 也可以使用 "rgb(0, 0, 255)" 字串設定顏色值
+        ctx.strokeStyle = "blue"
+        ctx.stroke()
+        ctx.closePath()
 
-# 垂直線
-for i in range(6):
-    ctx.beginPath()
-# 設定線的寬度為 1 個單位
-    ctx.lineWidth = 1
-    ctx.moveTo(100+i*20, 100)
-    ctx.lineTo(100+i*20, 220)
-    # 設定顏色為藍色, 也可以使用 "rgb(0, 0, 255)" 字串設定顏色值
-    ctx.strokeStyle = "blue"
-    ctx.stroke()
-    ctx.closePath()
-'''
-def canvasText(x, y, fontSize, string, sup, sub, color, ctx):
-    # 標定各弦音符號, 以及把位編號
-    ctx.beginPath()
-    ctx.fillStyle = color
-    ctx.strokeStyle = color
-    #ctx.font = "20px Arial"
-    ctx.font = str(fontSize)+ "px Arial"
-    ctx.fillText(string, x, y)
-    ctx.font = str(fontSize-8)+ "px Arial"
-    if sup != "":
-        ctx.fillText(sup, x+fontSize/1.6, y-fontSize/2)
-    if sub != "":
-        ctx.fillText(sup, x+fontSize/1.6, y)
-    ctx.fill()
-    ctx.stroke()
-    ctx.closePath()
-
+w = 20
+h = 30
+background(100, 100, w, h, 5, 5, ctx)
 &lt;/script&gt;</summary><category term="使用導引"></category></entry><entry><title>Brython 繪圖教學</title><link href="./brython-hui-tu-jiao-xue.html" rel="alternate"></link><published>2016-11-18T12:00:00+08:00</published><updated>2016-11-18T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:,2016-11-18:./brython-hui-tu-jiao-xue.html</id><summary type="html">&lt;p&gt;繪圖流程, 導入程式庫, 啟動, 然後引用各種模組開始繪圖&lt;/p&gt;
 
 &lt;!-- 導入 Brython 標準程式庫 --&gt;
