@@ -56,7 +56,7 @@
 <v t="amd.20160727114506.1" a="E"><vh>201609</vh>
 <v t="leo.20161114222444.1"><vh>@edit 20161114.md</vh></v>
 <v t="leo.20161118141358.1"><vh>@edit 20161118.md</vh></v>
-<v t="leo.20161114222445.1"><vh>newHeadline</vh></v>
+<v t="leo.20161114222445.1"><vh>@edit 20161202.md</vh></v>
 </v>
 </v>
 </v>
@@ -208,6 +208,5 @@ PLUGINS = ['liquid_tags.notebook', 'summary']
 <t tx="leo.20151213230957.1"># 設定網誌以 md 檔案建立的 file system date 為準, 無需自行設定
 
 DEFAULT_DATE = 'fs'</t>
-<t tx="leo.20161114222445.1"></t>
 </tnodes>
 </leo_file>

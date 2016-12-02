@@ -279,22 +279,6 @@ init_mathjax();
         <div class="col-sm-9">
 
             <article>
-                <h2><a href="../2016fall-ji-jie-she-ji-ji-suan-ji-cheng-shi-jiao-xue.html">2016Fall 機械設計計算機程式教學</a></h2>
-                <div class="summary"><p>本課程提供學生紮實之物件導向或式概念、Python程式語言訓練，本課程強調程式核心技術之撰寫經驗，包括：決策控制、迴圈、動畫、人機互動、集合與陣列。
-教導機械設計系的學生如何用創造力以及想像力發揮到最好。</p>
-                    <a class="btn btn-default btn-xs" href="../2016fall-ji-jie-she-ji-ji-suan-ji-cheng-shi-jiao-xue.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="../2016fall-jian-bao-yu-wang-zhi-xi-tong.html">2016Fall 簡報與網誌系統</a></h2>
-                <div class="summary"><p>這個系統共集結了 reveal.js 網際簡報與 pelican 靜態網誌系統.</p>
-
-                    <a class="btn btn-default btn-xs" href="../2016fall-jian-bao-yu-wang-zhi-xi-tong.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
                 <h2><a href="../brython-hui-tu-jiao-xue.html">Brython 繪圖教學</a></h2>
                 <div class="summary"><p>繪圖流程, 導入程式庫, 啟動, 然後引用各種模組開始繪圖</p>
 
@@ -330,6 +314,51 @@ for i in ...</script></!--></!--></!-->
                 </div>
             </article>
             <hr/>
+            <article>
+                <h2><a href="../brython-hui-tu-jiao-xue-w11.html">Brython 繪圖教學 W11</a></h2>
+                <div class="summary"><p>繪圖流程, 導入程式庫, 啟動, 然後引用各種模組開始繪圖</p>
+
+<!-- 以下實際利用  Brython 畫圖 -->
+
+<canvas id="chord1" width="600" height="400"></canvas>
+
+<script type="text/python3">
+from browser import document as doc
+import math
+# 準備繪圖畫布
+canvas = doc["chord1"]
+ctx = canvas.getContext("2d")
+
+# 水平線
+for i in range(5):
+    ctx.beginPath()
+# 設定線的寬度為 1 個單位
+    if i == 0:
+        ctx.lineWidth = 7
+    else:
+        ctx.lineWidth = 1
+    ctx.moveTo(99, 100+i*30)
+    ctx.lineTo(201 ...</script></!-->
+                    <a class="btn btn-default btn-xs" href="../brython-hui-tu-jiao-xue-w11.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="../2016fall-ji-jie-she-ji-ji-suan-ji-cheng-shi-jiao-xue.html">2016Fall 機械設計計算機程式教學</a></h2>
+                <div class="summary"><p>本課程提供學生紮實之物件導向或式概念、Python程式語言訓練，本課程強調程式核心技術之撰寫經驗，包括：決策控制、迴圈、動畫、人機互動、集合與陣列。
+教導機械設計系的學生如何用創造力以及想像力發揮到最好。</p>
+                    <a class="btn btn-default btn-xs" href="../2016fall-ji-jie-she-ji-ji-suan-ji-cheng-shi-jiao-xue.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="../2016fall-jian-bao-yu-wang-zhi-xi-tong.html">2016Fall 簡報與網誌系統</a></h2>
+                <div class="summary"><p>這個系統共集結了 reveal.js 網際簡報與 pelican 靜態網誌系統.</p>
+
+                    <a class="btn btn-default btn-xs" href="../2016fall-jian-bao-yu-wang-zhi-xi-tong.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
 
         </div>
         <div class="col-sm-3" id="sidebar">
@@ -341,6 +370,16 @@ for i in ...</script></!--></!--></!-->
             <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
                 <ul class="list-group" id="recentposts">
                     <li class="list-group-item">
+                        <a href="../brython-hui-tu-jiao-xue.html">
+                            Brython 繪圖教學
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="../brython-hui-tu-jiao-xue-w11.html">
+                            Brython 繪圖教學 W11
+                        </a>
+                    </li>
+                    <li class="list-group-item">
                         <a href="../2016fall-ji-jie-she-ji-ji-suan-ji-cheng-shi-jiao-xue.html">
                             2016Fall 機械設計計算機程式教學
                         </a>
@@ -348,11 +387,6 @@ for i in ...</script></!--></!--></!-->
                     <li class="list-group-item">
                         <a href="../2016fall-jian-bao-yu-wang-zhi-xi-tong.html">
                             2016Fall 簡報與網誌系統
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="../brython-hui-tu-jiao-xue.html">
-                            Brython 繪圖教學
                         </a>
                     </li>
                 </ul>
