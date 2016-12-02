@@ -57,6 +57,12 @@ def background(x, y, xinc, yinc, xnum, ynum, ctx):
 w = 20
 h = 30
 background(100, 100, w, h, 5, 5, ctx)
+mylist = ["E", "A", "D", "G", "B", "E"]
+num = 0
+for s in mylist:
+    #canvasText(100,  80, 20, "A", "b", "", "black", ctx)
+    canvasText(100+num*w,  80, 20, s, "", "", "black", ctx)
+    num = num + 1
 &lt;/script&gt;</summary><category term="使用導引"></category></entry><entry><title>Brython 繪圖教學</title><link href="./brython-hui-tu-jiao-xue.html" rel="alternate"></link><published>2016-11-18T12:00:00+08:00</published><updated>2016-11-18T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:,2016-11-18:./brython-hui-tu-jiao-xue.html</id><summary type="html">&lt;p&gt;繪圖流程, 導入程式庫, 啟動, 然後引用各種模組開始繪圖&lt;/p&gt;
 
 &lt;!-- 導入 Brython 標準程式庫 --&gt;
