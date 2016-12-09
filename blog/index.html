@@ -283,8 +283,7 @@ init_mathjax();
 
 <!-- 導入 Brython 標準程式庫 -->
 
-<script type="text/javascript" 
-    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js">
+<script type="text/javascript" src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js">
 </script>
 
 <!-- 啟動 Brython -->
@@ -306,7 +305,13 @@ import math
 canvas = doc["chord1"]
 ctx = canvas.getContext("2d")
 
-def background(x, y, xinc, yinc, xnum, ynum, ctx ...</script></!--></!--></!-->
+def background(x, y, xinc, yinc, xnum, ynum, ctx):
+    # 水平線
+    for i in range(ynum+1):
+        ctx.beginPath()
+    # 設定線的寬度為 1 個單位
+        if i == 0:
+            ctx ...</script></!--></!--></!-->
                     <a class="btn btn-default btn-xs" href="./brython-hui-tu-jiao-xue-w12.html">more ...</a>
                 </div>
             </article>

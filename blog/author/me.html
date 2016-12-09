@@ -2,7 +2,7 @@
 <html lang="en"
 >
 <head>
-    <title>Authors - 2016Fall 課程網誌 (虎尾科大MDE)</title>
+    <title>Articles by me - 2016Fall 課程網誌 (虎尾科大MDE)</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -173,19 +173,19 @@ init_mathjax();
         <meta property="og:site_name" content="2016Fall 課程網誌 (虎尾科大MDE)" />
         <meta property="og:type" content="website"/>
         <meta property="og:title" content="2016Fall 課程網誌 (虎尾科大MDE)"/>
-        <meta property="og:url" content="."/>
+        <meta property="og:url" content=".."/>
         <meta property="og:description" content="2016Fall 課程網誌 (虎尾科大MDE)"/>
 
 
     <!-- Bootstrap -->
-        <link rel="stylesheet" href="./theme/css/bootstrap.united.min.css" type="text/css"/>
-    <link href="./theme/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../theme/css/bootstrap.united.min.css" type="text/css"/>
+    <link href="../theme/css/font-awesome.min.css" rel="stylesheet">
 
-    <link href="./theme/css/pygments/monokai.css" rel="stylesheet">
-    <link href="./theme/tipuesearch/tipuesearch.css" rel="stylesheet">
-    <link rel="stylesheet" href="./theme/css/style.css" type="text/css"/>
+    <link href="../theme/css/pygments/monokai.css" rel="stylesheet">
+    <link href="../theme/tipuesearch/tipuesearch.css" rel="stylesheet">
+    <link rel="stylesheet" href="../theme/css/style.css" type="text/css"/>
 
-        <link href="./feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+        <link href="../feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
               title="2016Fall 課程網誌 (虎尾科大MDE) ATOM Feed"/>
 
 <script type="text/javascript" src="http://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shCore.js"></script>
@@ -247,25 +247,25 @@ init_mathjax();
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="./" class="navbar-brand">
+            <a href="../" class="navbar-brand">
 2016Fall 課程網誌 (虎尾科大MDE)            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                         <li><a href="./pages/about/">
+                         <li><a href="../pages/about/">
                              About
                           </a></li>
                         <li >
-                            <a href="./category/misc.html">Misc</a>
+                            <a href="../category/misc.html">Misc</a>
                         </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li><span>
-                <form class="navbar-search" action="./search.html">
+                <form class="navbar-search" action="../search.html">
                   <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input" required>
                 </form></span>
               </li>
-              <li><a href="./archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+              <li><a href="../archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -277,10 +277,46 @@ init_mathjax();
     <div class="row">
         <div class="col-sm-9">
 
-    <h1>Authors on 2016Fall 課程網誌 (虎尾科大MDE)</h1>
-        <li><a href="./author/40523126.html">40523126</a> (1)</li>
-        <li><a href="./author/me.html">me</a> (1)</li>
-        <li><a href="./author/yen.html">yen</a> (2)</li>
+            <article>
+                <h2><a href="../brython-hui-tu-jiao-xue-w12.html">Brython 繪圖教學 W12</a></h2>
+                <div class="summary"><p>繪圖流程, 導入程式庫, 啟動, 然後引用各種模組開始繪圖</p>
+
+<!-- 導入 Brython 標準程式庫 -->
+
+<script type="text/javascript" src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js">
+</script>
+
+<!-- 啟動 Brython -->
+
+<script>
+window.onload=function(){
+brython(1);
+}
+</script>
+
+<!-- 以下實際利用  Brython 畫圖 -->
+
+<canvas id="chord1" width="600" height="400"></canvas>
+
+<script type="text/python3">
+from browser import document as doc
+import math
+# 準備繪圖畫布
+canvas = doc["chord1"]
+ctx = canvas.getContext("2d")
+
+def background(x, y, xinc, yinc, xnum, ynum, ctx):
+    # 水平線
+    for i in range(ynum+1):
+        ctx.beginPath()
+    # 設定線的寬度為 1 個單位
+        if i == 0:
+            ctx ...</script></!--></!--></!-->
+                    <a class="btn btn-default btn-xs" href="../brython-hui-tu-jiao-xue-w12.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+
         </div>
         <div class="col-sm-3" id="sidebar">
             <aside>
@@ -291,39 +327,24 @@ init_mathjax();
             <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
                 <ul class="list-group" id="recentposts">
                     <li class="list-group-item">
-                        <a href="./brython-hui-tu-jiao-xue-w12.html">
+                        <a href="../brython-hui-tu-jiao-xue-w12.html">
                             Brython 繪圖教學 W12
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="./brython-hui-tu-jiao-xue.html">
-                            Brython 繪圖教學
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="./2016fall-ji-jie-she-ji-ji-suan-ji-cheng-shi-jiao-xue.html">
-                            2016Fall 機械設計計算機程式教學
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="./2016fall-jian-bao-yu-wang-zhi-xi-tong.html">
-                            2016Fall 簡報與網誌系統
                         </a>
                     </li>
                 </ul>
             </li>
 
-            <li class="list-group-item"><a href="./categories.html"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4></a>
+            <li class="list-group-item"><a href="../categories.html"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4></a>
                 <ul class="list-group" id="categories">
                     <li class="list-group-item">
-                        <a href="./category/misc.html">
+                        <a href="../category/misc.html">
                             <i class="fa fa-folder-open fa-lg"></i> Misc
                         </a>
                     </li>
                 </ul>
             </li>
 
-            <li class="list-group-item"><a href="./tags.html"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+            <li class="list-group-item"><a href="../tags.html"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
                 <ul class="list-group list-inline tagcloud" id="tags">
                 </ul>
             </li>
@@ -369,13 +390,13 @@ init_mathjax();
       </div>
    </div>
 </footer>
-<script src="./theme/js/jquery.min.js"></script>
+<script src="../theme/js/jquery.min.js"></script>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="./theme/js/bootstrap.min.js"></script>
+<script src="../theme/js/bootstrap.min.js"></script>
 
 <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-<script src="./theme/js/respond.min.js"></script>
+<script src="../theme/js/respond.min.js"></script>
 
 
 </body>
