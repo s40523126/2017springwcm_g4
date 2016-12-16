@@ -279,18 +279,33 @@ init_mathjax();
 
             <article>
                 <h2><a href="../brython-hui-tu-jiao-xue-w14.html">Brython 繪圖教學 W14</a></h2>
-                <div class="summary"><script type="text/python3">
+                <div class="summary"><!-- 導入 Brython 標準程式庫 -->
+
+<script type="text/javascript" 
+    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js">
+</script>
+
+<!-- 啟動 Brython -->
+
+<script>
+window.onload=function(){
+brython(1);
+}
+</script>
+
+<!-- ch01 基本的列印與輸入函式 -->
+
+<script type="text/python3">
 from browser import document
 from browser import alert
 
-def get_input(ev):
-    the_input= input("請輸入")
-    alert("輸入為:"+str(the_input))
-
-document['ch01'].bind('click',get_input)
-</script>
-
-<p><button id="ch01">S40523126</button></p>
+'''
+    # 利用 input() 取得使用者輸入, 然後進行資料處理或運算後, 列出結果
+    #01-01.py
+    print ("Hello World!")
+    #01-02.py
+    thetext = input("Enter some text ")
+    print ("This is what ...</script></!--></!--></!-->
                     <a class="btn btn-default btn-xs" href="../brython-hui-tu-jiao-xue-w14.html">more ...</a>
                 </div>
             </article>
