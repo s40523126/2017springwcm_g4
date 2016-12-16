@@ -46,7 +46,7 @@ def get_input(ev):
 document['ch01'].bind('click',get_input)
 &lt;/script&gt;
 
-&lt;p&gt;&lt;button id="ch01"&gt;取輸入後, 列印出來&lt;/button&gt;&lt;/p&gt;
+&lt;p&gt;&lt;button id="ch01"&gt;s40523126&lt;/button&gt;&lt;/p&gt;
 
 &lt;pre class="brush: python"&gt;
 &lt;script type="text/python3"&gt;
