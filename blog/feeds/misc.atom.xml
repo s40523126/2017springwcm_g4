@@ -59,7 +59,7 @@ def get_input(ev):
 
 document['ch01'].bind('click',get_input)
 &lt;/script&gt;
-&lt;button id="ch01"&gt;取輸入後, 列印出來&lt;/button&gt;
+&lt;button id="ch01"&gt;s40523126&lt;/button&gt;
 &lt;/pre&gt;</summary><category term="W14"></category></entry><entry><title>Brython 繪圖教學 W13</title><link href="./brython-hui-tu-jiao-xue-w13.html" rel="alternate"></link><published>2016-12-09T12:00:00+08:00</published><updated>2016-12-09T12:00:00+08:00</updated><author><name>40523126</name></author><id>tag:,2016-12-09:./brython-hui-tu-jiao-xue-w13.html</id><summary type="html">&lt;p&gt;將 &lt;a href="http://mde.tw/2016fallcp/course/Python3Programs.txt"&gt;http://mde.tw/2016fallcp/course/Python3Programs.txt&lt;/a&gt; 整理成brython&lt;/p&gt;
 
 
