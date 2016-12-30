@@ -24,20 +24,21 @@ brython(1);
 from browser import document
 from browser import html
 import random
-num = random.randint(1,100)
- #設法將num列印在網頁上
 print_location = document["newyear"]
 
 def gen_int():
-  num = random.randint(1,49)
-  print_location&lt;=num+html.BR()
+    num = random.randint(1, 49)
+    # 設法將 num 列印在網頁上
+    #print_location = document["newyear"]
+    print_location &lt;= num + html.BR()
 
-  def lottery(e):
+def lottery(e):
     for i in range(6):
-         get_int()
-        print_location&lt;="恭喜中獎" +html.BR()
+        gen_int()
+    print_location &lt;= "恭喜中獎!" + html.BR()
 
-document["but1"].bind("click",gen_int)
+#document["but1"].bind("click", gen_int)
+document["but1"].bind("click", lottery)
 &lt;/script&gt;
 
 &lt;p&gt;&lt;button id="but1"&gt;產生整數亂數&lt;/button&gt;&lt;/p&gt;</summary><category term="W16"></category></entry><entry><title>Brython 繪圖教學 W15</title><link href="./brython-hui-tu-jiao-xue-w15.html" rel="alternate"></link><published>2016-12-23T12:00:00+08:00</published><updated>2016-12-23T12:00:00+08:00</updated><author><name>40523126</name></author><id>tag:,2016-12-23:./brython-hui-tu-jiao-xue-w15.html</id><summary type="html">&lt;!-- 導入 Brython 標準程式庫 --&gt;

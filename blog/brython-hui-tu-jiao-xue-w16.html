@@ -337,20 +337,21 @@ brython(1);
 from browser import document
 from browser import html
 import random
-num = random.randint(1,100)
- #設法將num列印在網頁上
 print_location = document["newyear"]
 
 def gen_int():
-  num = random.randint(1,49)
-  print_location<=num+html.BR()
+    num = random.randint(1, 49)
+    # 設法將 num 列印在網頁上
+    #print_location = document["newyear"]
+    print_location <= num + html.BR()
 
-  def lottery(e):
+def lottery(e):
     for i in range(6):
-         get_int()
-        print_location<="恭喜中獎" +html.BR()
+        gen_int()
+    print_location <= "恭喜中獎!" + html.BR()
 
-document["but1"].bind("click",gen_int)
+#document["but1"].bind("click", gen_int)
+document["but1"].bind("click", lottery)
 </script>
 
 <p><button id="but1">產生整數亂數</button></p>
