@@ -1,5 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>2016Fall 課程網誌 (虎尾科大MDE)</title><link href="./" rel="alternate"></link><link href="./feeds/misc.atom.xml" rel="self"></link><id>./</id><updated>2016-12-23T12:00:00+08:00</updated><entry><title>Brython 繪圖教學 W15</title><link href="./brython-hui-tu-jiao-xue-w15.html" rel="alternate"></link><published>2016-12-23T12:00:00+08:00</published><updated>2016-12-23T12:00:00+08:00</updated><author><name>40523126</name></author><id>tag:,2016-12-23:./brython-hui-tu-jiao-xue-w15.html</id><summary type="html">&lt;!-- 導入 Brython 標準程式庫 --&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>2016Fall 課程網誌 (虎尾科大MDE)</title><link href="./" rel="alternate"></link><link href="./feeds/misc.atom.xml" rel="self"></link><id>./</id><updated>2016-12-30T12:00:00+08:00</updated><entry><title>Brython 繪圖教學 W16</title><link href="./brython-hui-tu-jiao-xue-w16.html" rel="alternate"></link><published>2016-12-30T12:00:00+08:00</published><updated>2016-12-30T12:00:00+08:00</updated><author><name>40523126</name></author><id>tag:,2016-12-30:./brython-hui-tu-jiao-xue-w16.html</id><summary type="html">&lt;p&gt;2017 年元旦快樂&lt;/p&gt;
+
+
+&lt;!-- 導入 Brython 標準程式庫 --&gt;
+
+&lt;script type="text/javascript"
+   src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js"&gt;
+   &lt;/script&gt;
+
+&lt;!-- 啟動 Brython --&gt;
+
+&lt;script&gt;
+window.onload=function(){
+brython(1);
+}
+&lt;/script&gt;
+
+&lt;!-- 以下可以執行  Brython 程式 --&gt;
+
+&lt;div id="newyear"&gt;&lt;/div&gt;
+
+&lt;script type="text/python3"&gt;
+from browser import document
+from browser import html
+import random
+num = random.randint(1,100)
+ #設法將num列印在網頁上
+print_location = document["newyear"]
+
+def gen_int():
+  num = random.randint(1,49)
+  print_location&lt;=num+html.BR()
+
+  def lottery(e):
+    for i in range(6):
+         get_int()
+        print_location&lt;="恭喜中獎" +html.BR()
+
+document["but1"].bind("click",gen_int)
+&lt;/script&gt;
+
+&lt;p&gt;&lt;button id="but1"&gt;產生整數亂數&lt;/button&gt;&lt;/p&gt;</summary><category term="W16"></category></entry><entry><title>Brython 繪圖教學 W15</title><link href="./brython-hui-tu-jiao-xue-w15.html" rel="alternate"></link><published>2016-12-23T12:00:00+08:00</published><updated>2016-12-23T12:00:00+08:00</updated><author><name>40523126</name></author><id>tag:,2016-12-23:./brython-hui-tu-jiao-xue-w15.html</id><summary type="html">&lt;!-- 導入 Brython 標準程式庫 --&gt;
 
 &lt;script type="text/javascript" 
     src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js"&gt;
