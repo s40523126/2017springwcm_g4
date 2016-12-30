@@ -41,7 +41,20 @@ def lottery(e):
 document["but1"].bind("click", lottery)
 &lt;/script&gt;
 
-&lt;p&gt;&lt;button id="but1"&gt;產生整數亂數&lt;/button&gt;&lt;/p&gt;</summary><category term="W16"></category></entry><entry><title>Brython 繪圖教學 W15</title><link href="./brython-hui-tu-jiao-xue-w15.html" rel="alternate"></link><published>2016-12-23T12:00:00+08:00</published><updated>2016-12-23T12:00:00+08:00</updated><author><name>40523126</name></author><id>tag:,2016-12-23:./brython-hui-tu-jiao-xue-w15.html</id><summary type="html">&lt;!-- 導入 Brython 標準程式庫 --&gt;
+&lt;p&gt;&lt;button id="but1"&gt;產生整數亂數&lt;/button&gt;
+&lt;script type="text/python3"&gt;
+from browser import document
+from browser import html
+import random
+print_location = document["newyear"]&lt;/p&gt;
+&lt;p&gt;def lottery(e):
+    num_list = random.sample(list(range(1, 50)), 6)
+    for i in range(6):
+        print_location &amp;lt;= num_list[i] + html.BR()
+    print_location &amp;lt;= "(不會重複)恭喜中獎!" + html.BR()&lt;/p&gt;
+&lt;p&gt;document["but2"].bind("click", lottery)
+&lt;/script&gt;
+&lt;button id="but2"&gt;恭喜中獎&lt;/button&gt;&lt;/p&gt;</summary><category term="W16"></category></entry><entry><title>Brython 繪圖教學 W15</title><link href="./brython-hui-tu-jiao-xue-w15.html" rel="alternate"></link><published>2016-12-23T12:00:00+08:00</published><updated>2016-12-23T12:00:00+08:00</updated><author><name>40523126</name></author><id>tag:,2016-12-23:./brython-hui-tu-jiao-xue-w15.html</id><summary type="html">&lt;!-- 導入 Brython 標準程式庫 --&gt;
 
 &lt;script type="text/javascript" 
     src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js"&gt;
