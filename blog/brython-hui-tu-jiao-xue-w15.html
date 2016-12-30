@@ -170,13 +170,13 @@ init_mathjax();
 
         <meta name="author" content="40523126" />
         <meta name="keywords" content="W15" />
-        <meta name="description" content="from browser import document as do from browser import html c = do[&#34;con&#34;] def compa(e): your_input = input(&#34;請輸入一個整數!&#34;) # 如何判斷所輸入的整數比 10 大 if int(your_input) &gt; 10: c" />
+        <meta name="description" content="window.onload=function(){ brython(1); } from browser import document as do from browser import html c = do[&#34;con&#34;] def compa(e): your_input = input(&#34;請輸入一個整數!&#34;) # 如何判斷所輸入的整數比 10 大 if int(your_input) &gt; 10: c" />
 
         <meta property="og:site_name" content="2016Fall 課程網誌 (虎尾科大MDE)" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="Brython 繪圖教學 W15"/>
         <meta property="og:url" content="./brython-hui-tu-jiao-xue-w15.html"/>
-        <meta property="og:description" content="from browser import document as do from browser import html c = do[&#34;con&#34;] def compa(e): your_input = input(&#34;請輸入一個整數!&#34;) # 如何判斷所輸入的整數比 10 大 if int(your_input) &gt; 10: c"/>
+        <meta property="og:description" content="window.onload=function(){ brython(1); } from browser import document as do from browser import html c = do[&#34;con&#34;] def compa(e): your_input = input(&#34;請輸入一個整數!&#34;) # 如何判斷所輸入的整數比 10 大 if int(your_input) &gt; 10: c"/>
         <meta property="article:published_time" content="2016-12-23" />
             <meta property="article:section" content="Misc" />
             <meta property="article:tag" content="W15" />
@@ -314,6 +314,20 @@ init_mathjax();
                 </div>
                 <!-- 導入 Brython 標準程式庫 -->
 
+<script type="text/javascript" 
+    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js">
+</script>
+
+<!-- 啟動 Brython -->
+
+<script>
+window.onload=function(){
+brython(1);
+}
+</script>
+
+<!-- 以下可以執行  Brython 程式 -->
+
 <div id="con"></div>
 
 <script type="text/python3">
@@ -338,6 +352,30 @@ do["b1"].bind("click", compa)
 </script>
 
 <p><button id="b1">compa</button></p>
+
+<pre class="brush: python">
+<div id="con"></div>
+<script type="text/python3">
+from browser import document as do
+from browser import html
+c = do["con"]
+def compa(e):
+    your_input = input("請輸入一個整數!")
+    # 如何判斷所輸入的整數比 10 大
+
+    if int(your_input) > 10:
+        c <= "所輸入的整數:" + your_input + "比 10 大" + html.BR()
+    else:
+        c <= "所輸入的整數:" + your_input + "比 10 小" + html.BR()
+
+#print("test")
+'''
+for i in range(5):
+    c <= "test" + html.BR()
+'''
+do["b1"].bind("click", compa)
+</script>
+<button id="b1">compa</button>
             </div>
             <!-- /.entry-content -->
         </article>
