@@ -76,8 +76,8 @@ def animate():
     x4 = 400
     y4 = 200
 
-    x5 = x4 - 200
-    y5 = y4 - 200
+    x5 = x4 - 200 
+    y5 = y4 - 200 
 
     x5 = x3
     y5 = y3
@@ -179,7 +179,19 @@ def animate():
     theta += 1
 
 timer.set_interval(animate, 50)
-&lt;/script&gt;</summary><category term="W17"></category></entry><entry><title>猜數字遊戲</title><link href="./cai-shu-zi-you-xi.html" rel="alternate"></link><published>2016-12-30T12:01:00+08:00</published><updated>2016-12-30T12:01:00+08:00</updated><author><name>40523126</name></author><id>tag:,2016-12-30:./cai-shu-zi-you-xi.html</id><summary type="html">&lt;!-- PELICAN_END_SUMMARY --&gt;
+&lt;/script&gt;
+&lt;/pre&gt;</summary><category term="W17"></category></entry><entry><title>Test</title><link href="./test.html" rel="alternate"></link><published>2017-01-06T12:00:00+08:00</published><updated>2017-01-06T12:00:00+08:00</updated><author><name>40523126</name></author><id>tag:,2017-01-06:./test.html</id><summary type="html">&lt;!-- PELICAN_END_SUMMARY --&gt;
+
+&lt;!-- 導入 Brython 標準程式庫 --&gt;
+
+&lt;pre name="code" class="brush: python;"&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;for i in range(1,10):
+     print(i)&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt; raw_input(&amp;quot;Press any key...&amp;quot;)
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary><category term="W18"></category></entry><entry><title>猜數字遊戲</title><link href="./cai-shu-zi-you-xi.html" rel="alternate"></link><published>2016-12-30T12:01:00+08:00</published><updated>2016-12-30T12:01:00+08:00</updated><author><name>40523126</name></author><id>tag:,2016-12-30:./cai-shu-zi-you-xi.html</id><summary type="html">&lt;!-- PELICAN_END_SUMMARY --&gt;
 
 &lt;!-- 導入 Brython 標準程式庫 --&gt;
 
