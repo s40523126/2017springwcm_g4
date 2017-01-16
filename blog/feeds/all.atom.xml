@@ -95,26 +95,6 @@ timer.set_interval(animate, 50)
 &lt;/script&gt;
 
 &lt;pre class="brush: python"&gt;
-&lt;!-- 導入 Brython 標準程式庫 --&gt;
-&lt;script type="text/javascript" src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js"&gt;
-&lt;/script&gt;
-
-&lt;!-- 啟動 Brython --&gt;
-&lt;script&gt;
-window.onload=function(){
-brython(1);
-}
-&lt;/script&gt;
-
-&lt;!-- 以下可以執行  Brython 程式 --&gt;
-&lt;canvas id="onebar" width="800" height="400"&gt;&lt;/canvas&gt;
-&lt;script type="text/python3"&gt;
-from browser import document
-from browser import window
-from browser import timer
-import math
-canvas = document["onebar"]
-ctx = canvas.getContext("2d")
 
 # 畫圓函式
 def circle(x,y,r):
