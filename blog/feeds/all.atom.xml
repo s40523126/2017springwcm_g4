@@ -563,11 +563,6 @@ for s in mylist:
 &lt;p&gt;以下為程式碼:&lt;/p&gt;
 &lt;pre class="brush: python"&gt;
 
-&lt;canvas id="chord1" width="600" height="400"&gt;&lt;/canvas&gt;
-
-&lt;script type="text/python3"&gt;
-from browser import document as doc
-import math
 # 準備繪圖畫布
 canvas = doc["chord1"]
 ctx = canvas.getContext("2d")
@@ -626,7 +621,8 @@ for s in mylist:
     #canvasText(100,  80, 20, "A", "b", "", "black", ctx)
     canvasText(100+num*w,  80, 20, s, "", "", "black", ctx)
     num = num + 1
-&lt;/script&gt;</summary><category term="使用導引"></category></entry><entry><title>Brython 繪圖教學</title><link href="./brython-hui-tu-jiao-xue.html" rel="alternate"></link><published>2016-11-18T12:00:00+08:00</published><updated>2016-11-18T12:00:00+08:00</updated><author><name>40523126</name></author><id>tag:,2016-11-18:./brython-hui-tu-jiao-xue.html</id><summary type="html">&lt;p&gt;繪圖流程, 導入程式庫, 啟動, 然後引用各種模組開始繪圖&lt;/p&gt;
+&lt;/script&gt;
+&lt;/pre&gt;</summary><category term="使用導引"></category></entry><entry><title>Brython 繪圖教學</title><link href="./brython-hui-tu-jiao-xue.html" rel="alternate"></link><published>2016-11-18T12:00:00+08:00</published><updated>2016-11-18T12:00:00+08:00</updated><author><name>40523126</name></author><id>tag:,2016-11-18:./brython-hui-tu-jiao-xue.html</id><summary type="html">&lt;p&gt;繪圖流程, 導入程式庫, 啟動, 然後引用各種模組開始繪圖&lt;/p&gt;
 
 &lt;!-- 導入 Brython 標準程式庫 --&gt;
 
