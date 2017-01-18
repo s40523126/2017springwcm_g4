@@ -668,6 +668,7 @@ ctx.closePath()
 &lt;/script&gt;
 
 &lt;p&gt;以下為程式碼:&lt;/p&gt;
+
 &lt;pre class="brush: python"&gt;
 &lt;!-- 導入 Brython 標準程式庫 --&gt;
 &lt;script type="text/javascript" 
