@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>./</loc>
-<lastmod>2017-01-19T00:09:30-00:00</lastmod>
+<lastmod>2017-01-19T00:11:22-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>./archives.html</loc>
-<lastmod>2017-01-19T00:09:30-00:00</lastmod>
+<lastmod>2017-01-19T00:11:22-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>./tags.html</loc>
-<lastmod>2017-01-19T00:09:30-00:00</lastmod>
+<lastmod>2017-01-19T00:11:22-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>./categories.html</loc>
-<lastmod>2017-01-19T00:09:30-00:00</lastmod>
+<lastmod>2017-01-19T00:11:22-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -39,21 +39,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>./dan-xian-rao-hei-dian-xuan-zhuan-dong-hua.html</loc>
+<loc>./dan-xian-rao-hei-dian-xuan-zhuan-dong-hua-xin-de.html</loc>
 <lastmod>2017-01-06T12:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./cai-shu-zi-you-xi.html</loc>
+<loc>./cai-shu-zi-you-xi-xin-de.html</loc>
 <lastmod>2016-12-30T12:01:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./brython-hui-tu-jiao-xue-w16.html</loc>
+<loc>./yuan-dan-kuai-le.html</loc>
 <lastmod>2016-12-30T12:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
@@ -67,7 +67,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>./brython-hui-tu-jiao-xue-w14.html</loc>
+<loc>./jian-li-button.html</loc>
 <lastmod>2016-12-16T12:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
@@ -81,7 +81,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>./brython-hui-tu-jiao-xue-w12.html</loc>
+<loc>./ji-ta-he-xian-xin-de.html</loc>
 <lastmod>2016-12-02T12:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
@@ -116,13 +116,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>./tag/w17.html</loc>
-<lastmod>2017-01-06T12:00:00+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>./tag/w14.html</loc>
 <lastmod>2016-12-16T12:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -130,8 +123,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>./tag/w15.html</loc>
-<lastmod>2016-12-23T12:00:00+08:06</lastmod>
+<loc>./tag/w17.html</loc>
+<lastmod>2017-01-06T12:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -153,6 +146,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>./tag/w16.html</loc>
 <lastmod>2016-12-30T12:01:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>./tag/w15.html</loc>
+<lastmod>2016-12-23T12:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

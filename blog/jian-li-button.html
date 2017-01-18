@@ -2,7 +2,7 @@
 <html lang="en"
 >
 <head>
-    <title>猜數字遊戲 - 2016Fall 課程網誌 (虎尾科大MDE)</title>
+    <title>建立button - 2016Fall 課程網誌 (虎尾科大MDE)</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -166,19 +166,20 @@ init_mathjax = function() {
 init_mathjax();
 </script>
 
-<link rel="canonical" href="./cai-shu-zi-you-xi.html">
+<link rel="canonical" href="./jian-li-button.html">
 
         <meta name="author" content="40523126" />
-        <meta name="keywords" content="W16" />
+        <meta name="keywords" content="W14" />
+        <meta name="description" content="範例:自己的學號 window.onload=function(){ brython(1); } from browser import document from browser import alert &#39;&#39;&#39; # 利用 input() 取得使用者輸入, 然後進行資料處理或運算後, 列出結果 #01-01.py print (&#34;Hello World!&#34;) #01-02.py thetext = input(&#34;Enter some text &#34;) print (&#34;This ..." />
 
         <meta property="og:site_name" content="2016Fall 課程網誌 (虎尾科大MDE)" />
         <meta property="og:type" content="article"/>
-        <meta property="og:title" content="猜數字遊戲"/>
-        <meta property="og:url" content="./cai-shu-zi-you-xi.html"/>
-        <meta property="og:description" content=""/>
-        <meta property="article:published_time" content="2016-12-30" />
+        <meta property="og:title" content="建立button"/>
+        <meta property="og:url" content="./jian-li-button.html"/>
+        <meta property="og:description" content="範例:自己的學號 window.onload=function(){ brython(1); } from browser import document from browser import alert &#39;&#39;&#39; # 利用 input() 取得使用者輸入, 然後進行資料處理或運算後, 列出結果 #01-01.py print (&#34;Hello World!&#34;) #01-02.py thetext = input(&#34;Enter some text &#34;) print (&#34;This ..."/>
+        <meta property="article:published_time" content="2016-12-16" />
             <meta property="article:section" content="Misc" />
-            <meta property="article:tag" content="W16" />
+            <meta property="article:tag" content="W14" />
             <meta property="article:author" content="40523126" />
 
 
@@ -286,10 +287,10 @@ init_mathjax();
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="./cai-shu-zi-you-xi.html"
+                    <a href="./jian-li-button.html"
                        rel="bookmark"
-                       title="Permalink to 猜數字遊戲">
-                        猜數字遊戲
+                       title="Permalink to 建立button">
+                        建立button
                     </a>
                 </h1>
             </header>
@@ -299,7 +300,7 @@ init_mathjax();
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2016-12-30T12:01:00+08:00"> 週五 30 十二月 2016</time>
+        <i class="fa fa-calendar"></i><time datetime="2016-12-16T12:00:00+08:00"> 週五 16 十二月 2016</time>
     </span>
             <span class="label label-default">By</span>
             <a href="./author/40523126.html"><i class="fa fa-user"></i> 40523126</a>
@@ -307,17 +308,16 @@ init_mathjax();
 
 
 <span class="label label-default">Tags</span>
-	<a href="./tag/w16.html">W16</a>
+	<a href="./tag/w14.html">W14</a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <!-- PELICAN_END_SUMMARY -->
-
+                <p>範例:自己的學號</p>
 <!-- 導入 Brython 標準程式庫 -->
 
-<script type="text/javascript"
-   src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js">
-   </script>
+<script type="text/javascript" 
+    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js">
+</script>
 
 <!-- 啟動 Brython -->
 
@@ -327,93 +327,54 @@ brython(1);
 }
 </script>
 
-<!-- 以下可以執行  Brython 程式 -->
-
-<div id="id3"></div>
+<!-- ch01 基本的列印與輸入函式 -->
 
 <script type="text/python3">
 from browser import document
-from browser import html
-import random
+from browser import alert
 
-id3 = document["id3"]
-def guess(ev):
-    # 清除 id3 中的內容
-    id3.clear()
-    id3 <= "開始玩猜數字遊戲" + html.BR()
-    標準答案 = random.randint(1, 100)
-    你猜的數字 = int(input("請輸入您所猜 1~100 間的整數:"))
-    猜測次數 = 1
-    while 標準答案 != 你猜的數字:
-        if 標準答案 < 你猜的數字:
-            #print("太大了，再猜一次 :)加油")
-            # 清除 id3 中的內容
-            id3.clear()
-            id3 <= "太大了，再猜一次 :)加油" + html.BR()
-        else:
-            #print("太小了，再猜一次 :)加油")
-            # 清除 id3 中的內容
-            id3.clear()
-            id3 <= "太小了，再猜一次 :)加油" + html.BR()
-        你猜的數字 = int(input("請輸入您所猜 1~100 間的整數:"))
-        猜測次數 += 1
+'''
+    # 利用 input() 取得使用者輸入, 然後進行資料處理或運算後, 列出結果
+    #01-01.py
+    print ("Hello World!")
+    #01-02.py
+    thetext = input("Enter some text ")
+    print ("This is what you entered:")
+    print (thetext)
+    #01-03.py
+    # Note that \n within quote marks forces a new line to be printed
+    thetext = input("Enter some text\n")
+    print ("This is what you entered:")
+    print (thetext)
+    #01-04.py
+    prompt  = "Enter a some text "
+    thetext = input(prompt)
+    print ("This is what you entered:")
+    print (thetext)
+'''
 
-    #print("猜對了！總共猜了", 猜測次數, "次")
-    id3 <= "猜對了！答案為" + str(標準答案) + ", 總共猜了" + str(猜測次數) + "次"
+def get_input(ev):
+    the_input= input("請輸入")
+    alert("輸入為:"+str(the_input))
 
-document["but3"].bind("click", guess)
+document['ch01'].bind('click',get_input)
 </script>
 
-<p><button id="but3">玩猜數字遊戲</button></p>
-<div id="id4"></div>
+<p><button id="ch01">s40523126</button></p>
 
+<pre class="brush: python">
 <script type="text/python3">
 from browser import document
-from browser import html
-import random
+from browser import alert
 
-id4 = document["id4"]
-def autoguess(ev):
-    執行次數 = 100
-    總猜測次數 = 0
-    for i in range(執行次數):
-        id4 <= "第" + str(i+1) + "次玩:" + html.BR()
-        下限 = 1
-        上限 = 100
-        標準答案 = random.randint(下限, 上限)
-        pc猜的數字 = random.randint(下限, 上限)
-        #print(標準答案, pc猜的數字)
-        #integer int()
-        #string str()
-        #float float()
-        #你猜的數字 = int(input("請輸入您所猜的整數:"))
-        猜測次數 = 1
-        while 標準答案 != pc猜的數字:
-            if 標準答案 < pc猜的數字:
-                #print("太大了，再猜一次 :)加油")
-                # 因此已經確定"pc猜的數字"不是答案, 因此 - 1
-                id4 <= "電腦猜的數字:" + str(pc猜的數字) + " 太大了!" + html.BR()
-                上限 = pc猜的數字 - 1
-            else:
-                #print("太小了，再猜一次 :)加油")
-                # 因此已經確定"pc猜的數字"不是答案, 因此 + 1
-                id4 <= "電腦猜的數字:" + str(pc猜的數字) + " 太小了!" + html.BR()
-                下限 = pc猜的數字 + 1
-            #pc猜的數字 = int(input("請輸入您所猜的整數:"))
-            pc猜的數字 = random.randint(下限, 上限)
-            猜測次數 += 1
+def get_input(ev):
+    the_input= input("請輸入")
+    alert("輸入為:"+str(the_input))
 
-        #print("猜對了！總共猜了", 猜測次數, "次")
-        id4 <= "電腦猜對了, 答案為: " + str(標準答案) + ", 總共猜了 "+ str(猜測次數) + "次" + html.BR()
-        總猜測次數 += 猜測次數
-    平均猜測次數 = int(總猜測次數/執行次數)
-    #print("平均次數", 平均猜測次數)
-    id4 <= "平均次數: " + str(平均猜測次數)
-
-document["but4"].bind("click", autoguess)
+document['ch01'].bind('click',get_input)
 </script>
-
-<p><button id="but4">利用程式玩猜數字</button></p>
+<button id="ch01">s40523126</button>
+</pre>
             </div>
             <!-- /.entry-content -->
         </article>
@@ -429,18 +390,18 @@ document["but4"].bind("click", autoguess)
             <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
                 <ul class="list-group" id="recentposts">
                     <li class="list-group-item">
-                        <a href="./dan-xian-rao-hei-dian-xuan-zhuan-dong-hua.html">
-                            單線繞黑點旋轉動畫
+                        <a href="./dan-xian-rao-hei-dian-xuan-zhuan-dong-hua-xin-de.html">
+                            單線繞黑點旋轉動畫(心得)
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="./cai-shu-zi-you-xi.html">
-                            猜數字遊戲
+                        <a href="./cai-shu-zi-you-xi-xin-de.html">
+                            猜數字遊戲(心得)
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="./brython-hui-tu-jiao-xue-w16.html">
-                            Brython 繪圖教學 W16
+                        <a href="./yuan-dan-kuai-le.html">
+                            元旦快樂
                         </a>
                     </li>
                     <li class="list-group-item">
@@ -449,8 +410,8 @@ document["but4"].bind("click", autoguess)
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="./brython-hui-tu-jiao-xue-w14.html">
-                            Brython 繪圖教學 W14
+                        <a href="./jian-li-button.html">
+                            建立button
                         </a>
                     </li>
                 </ul>

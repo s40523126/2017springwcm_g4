@@ -2,7 +2,7 @@
 <html lang="en"
 >
 <head>
-    <title>Brython 繪圖教學 W14 - 2016Fall 課程網誌 (虎尾科大MDE)</title>
+    <title>吉他和弦(心得) - 2016Fall 課程網誌 (虎尾科大MDE)</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -166,20 +166,20 @@ init_mathjax = function() {
 init_mathjax();
 </script>
 
-<link rel="canonical" href="./brython-hui-tu-jiao-xue-w14.html">
+<link rel="canonical" href="./ji-ta-he-xian-xin-de.html">
 
         <meta name="author" content="40523126" />
-        <meta name="keywords" content="W14" />
-        <meta name="description" content="window.onload=function(){ brython(1); } from browser import document from browser import alert &#39;&#39;&#39; # 利用 input() 取得使用者輸入, 然後進行資料處理或運算後, 列出結果 #01-01.py print (&#34;Hello World!&#34;) #01-02.py thetext = input(&#34;Enter some text &#34;) print (&#34;This is what ..." />
+        <meta name="keywords" content="使用導引" />
+        <meta name="description" content="繪圖流程, 導入程式庫, 啟動, 然後引用各種模組開始繪圖 心得:利用ctx(設定線寬高等等),再用list把1~6條弦名標示出來,如果要用和弦等等再插入其他指令. window.onload=function(){ brython(1); } from browser import document as doc import math # 準備繪圖畫布 canvas = doc[&#34;chord1&#34;] ctx = canvas.getContext(&#34;2d&#34;) def background(x ..." />
 
         <meta property="og:site_name" content="2016Fall 課程網誌 (虎尾科大MDE)" />
         <meta property="og:type" content="article"/>
-        <meta property="og:title" content="Brython 繪圖教學 W14"/>
-        <meta property="og:url" content="./brython-hui-tu-jiao-xue-w14.html"/>
-        <meta property="og:description" content="window.onload=function(){ brython(1); } from browser import document from browser import alert &#39;&#39;&#39; # 利用 input() 取得使用者輸入, 然後進行資料處理或運算後, 列出結果 #01-01.py print (&#34;Hello World!&#34;) #01-02.py thetext = input(&#34;Enter some text &#34;) print (&#34;This is what ..."/>
-        <meta property="article:published_time" content="2016-12-16" />
+        <meta property="og:title" content="吉他和弦(心得)"/>
+        <meta property="og:url" content="./ji-ta-he-xian-xin-de.html"/>
+        <meta property="og:description" content="繪圖流程, 導入程式庫, 啟動, 然後引用各種模組開始繪圖 心得:利用ctx(設定線寬高等等),再用list把1~6條弦名標示出來,如果要用和弦等等再插入其他指令. window.onload=function(){ brython(1); } from browser import document as doc import math # 準備繪圖畫布 canvas = doc[&#34;chord1&#34;] ctx = canvas.getContext(&#34;2d&#34;) def background(x ..."/>
+        <meta property="article:published_time" content="2016-12-02" />
             <meta property="article:section" content="Misc" />
-            <meta property="article:tag" content="W14" />
+            <meta property="article:tag" content="使用導引" />
             <meta property="article:author" content="40523126" />
 
 
@@ -287,10 +287,10 @@ init_mathjax();
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="./brython-hui-tu-jiao-xue-w14.html"
+                    <a href="./ji-ta-he-xian-xin-de.html"
                        rel="bookmark"
-                       title="Permalink to Brython 繪圖教學 W14">
-                        Brython 繪圖教學 W14
+                       title="Permalink to 吉他和弦(心得)">
+                        吉他和弦(心得)
                     </a>
                 </h1>
             </header>
@@ -300,7 +300,7 @@ init_mathjax();
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2016-12-16T12:00:00+08:00"> 週五 16 十二月 2016</time>
+        <i class="fa fa-calendar"></i><time datetime="2016-12-02T12:00:00+08:00"> 週五 02 十二月 2016</time>
     </span>
             <span class="label label-default">By</span>
             <a href="./author/40523126.html"><i class="fa fa-user"></i> 40523126</a>
@@ -308,12 +308,14 @@ init_mathjax();
 
 
 <span class="label label-default">Tags</span>
-	<a href="./tag/w14.html">W14</a>
+	<a href="./tag/shi-yong-dao-yin.html">使用導引</a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <!-- 導入 Brython 標準程式庫 -->
+                <p>繪圖流程, 導入程式庫, 啟動, 然後引用各種模組開始繪圖</p>
 
+<p>心得:利用ctx(設定線寬高等等),再用list把1~6條弦名標示出來,如果要用和弦等等再插入其他指令.
+<!-- 導入 Brython 標準程式庫 --></p>
 <script type="text/javascript" 
     src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js">
 </script>
@@ -326,54 +328,140 @@ brython(1);
 }
 </script>
 
-<!-- ch01 基本的列印與輸入函式 -->
+<!-- 以下實際利用  Brython 畫圖 -->
+
+<canvas id="chord1" width="600" height="400"></canvas>
 
 <script type="text/python3">
-from browser import document
-from browser import alert
+from browser import document as doc
+import math
+# 準備繪圖畫布
+canvas = doc["chord1"]
+ctx = canvas.getContext("2d")
 
-'''
-    # 利用 input() 取得使用者輸入, 然後進行資料處理或運算後, 列出結果
-    #01-01.py
-    print ("Hello World!")
-    #01-02.py
-    thetext = input("Enter some text ")
-    print ("This is what you entered:")
-    print (thetext)
-    #01-03.py
-    # Note that \n within quote marks forces a new line to be printed
-    thetext = input("Enter some text\n")
-    print ("This is what you entered:")
-    print (thetext)
-    #01-04.py
-    prompt  = "Enter a some text "
-    thetext = input(prompt)
-    print ("This is what you entered:")
-    print (thetext)
-'''
+def background(x, y, xinc, yinc, xnum, ynum, ctx):
+    # 水平線
+    for i in range(ynum+1):
+        ctx.beginPath()
+    # 設定線的寬度為 1 個單位
+        if i == 0:
+            ctx.lineWidth = 7
+        else:
+            ctx.lineWidth = 1
+        ctx.moveTo(x-1, y+i*yinc)
+        ctx.lineTo(x+xnum*xinc+1, y+i*yinc)
+        # 設定顏色為藍色, 也可以使用 "rgb(0, 0, 255)" 字串設定顏色值
+        ctx.strokeStyle = "blue"
+        ctx.stroke()
+        ctx.closePath()
 
-def get_input(ev):
-    the_input= input("請輸入")
-    alert("輸入為:"+str(the_input))
+    # 垂直線
+    for i in range(xnum+1):
+        ctx.beginPath()
+    # 設定線的寬度為 1 個單位
+        ctx.lineWidth = 1
+        ctx.moveTo(x+i*xinc, y)
+        ctx.lineTo(x+i*xinc, y+ynum*yinc)
+        # 設定顏色為藍色, 也可以使用 "rgb(0, 0, 255)" 字串設定顏色值
+        ctx.strokeStyle = "blue"
+        ctx.stroke()
+        ctx.closePath()
 
-document['ch01'].bind('click',get_input)
+def canvasText(x, y, fontSize, string, sup, sub, color, ctx):
+    # 標定各弦音符號, 以及把位編號
+    ctx.beginPath()
+    ctx.fillStyle = color
+    ctx.strokeStyle = color
+    #ctx.font = "20px Arial"
+    ctx.font = str(fontSize)+ "px Arial"
+    ctx.fillText(string, x, y)
+    ctx.font = str(fontSize-8)+ "px Arial"
+    if sup != "":
+        ctx.fillText(sup, x+fontSize/1.6, y-fontSize/2)
+    if sub != "":
+        ctx.fillText(sup, x+fontSize/1.6, y)
+    ctx.fill()
+    ctx.stroke()
+    ctx.closePath()
+
+w = 20
+h = 30
+background(100, 100, w, h, 5, 5, ctx)
+mylist = ["E", "A", "D", "G", "B", "E"]
+num = 0
+for s in mylist:
+    #canvasText(100,  80, 20, "A", "b", "", "black", ctx)
+    canvasText(100+num*w,  80, 20, s, "", "", "black", ctx)
+    num = num + 1
 </script>
 
-<p><button id="ch01">s40523126</button></p>
-
+<p>以下為程式碼:</p>
 <pre class="brush: python">
+
+<canvas id="chord1" width="600" height="400"></canvas>
+
 <script type="text/python3">
-from browser import document
-from browser import alert
+from browser import document as doc
+import math
+# 準備繪圖畫布
+canvas = doc["chord1"]
+ctx = canvas.getContext("2d")
 
-def get_input(ev):
-    the_input= input("請輸入")
-    alert("輸入為:"+str(the_input))
+def background(x, y, xinc, yinc, xnum, ynum, ctx):
+    # 水平線
+    for i in range(ynum+1):
+        ctx.beginPath()
+    # 設定線的寬度為 1 個單位
+        if i == 0:
+            ctx.lineWidth = 7
+        else:
+            ctx.lineWidth = 1
+        ctx.moveTo(x-1, y+i*yinc)
+        ctx.lineTo(x+xnum*xinc+1, y+i*yinc)
+        # 設定顏色為藍色, 也可以使用 "rgb(0, 0, 255)" 字串設定顏色值
+        ctx.strokeStyle = "blue"
+        ctx.stroke()
+        ctx.closePath()
 
-document['ch01'].bind('click',get_input)
+    # 垂直線
+    for i in range(xnum+1):
+        ctx.beginPath()
+    # 設定線的寬度為 1 個單位
+        ctx.lineWidth = 1
+        ctx.moveTo(x+i*xinc, y)
+        ctx.lineTo(x+i*xinc, y+ynum*yinc)
+        # 設定顏色為藍色, 也可以使用 "rgb(0, 0, 255)" 字串設定顏色值
+        ctx.strokeStyle = "blue"
+        ctx.stroke()
+        ctx.closePath()
+
+def canvasText(x, y, fontSize, string, sup, sub, color, ctx):
+    # 標定各弦音符號, 以及把位編號
+    ctx.beginPath()
+    ctx.fillStyle = color
+    ctx.strokeStyle = color
+    #ctx.font = "20px Arial"
+    ctx.font = str(fontSize)+ "px Arial"
+    ctx.fillText(string, x, y)
+    ctx.font = str(fontSize-8)+ "px Arial"
+    if sup != "":
+        ctx.fillText(sup, x+fontSize/1.6, y-fontSize/2)
+    if sub != "":
+        ctx.fillText(sup, x+fontSize/1.6, y)
+    ctx.fill()
+    ctx.stroke()
+    ctx.closePath()
+
+w = 20
+h = 30
+background(100, 100, w, h, 5, 5, ctx)
+mylist = ["E", "A", "D", "G", "B", "E"]
+num = 0
+for s in mylist:
+    #canvasText(100,  80, 20, "A", "b", "", "black", ctx)
+    canvasText(100+num*w,  80, 20, s, "", "", "black", ctx)
+    num = num + 1
 </script>
-<button id="ch01">s40523126</button>
-</pre>
             </div>
             <!-- /.entry-content -->
         </article>
@@ -389,18 +477,18 @@ document['ch01'].bind('click',get_input)
             <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
                 <ul class="list-group" id="recentposts">
                     <li class="list-group-item">
-                        <a href="./dan-xian-rao-hei-dian-xuan-zhuan-dong-hua.html">
-                            單線繞黑點旋轉動畫
+                        <a href="./dan-xian-rao-hei-dian-xuan-zhuan-dong-hua-xin-de.html">
+                            單線繞黑點旋轉動畫(心得)
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="./cai-shu-zi-you-xi.html">
-                            猜數字遊戲
+                        <a href="./cai-shu-zi-you-xi-xin-de.html">
+                            猜數字遊戲(心得)
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="./brython-hui-tu-jiao-xue-w16.html">
-                            Brython 繪圖教學 W16
+                        <a href="./yuan-dan-kuai-le.html">
+                            元旦快樂
                         </a>
                     </li>
                     <li class="list-group-item">
@@ -409,8 +497,8 @@ document['ch01'].bind('click',get_input)
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="./brython-hui-tu-jiao-xue-w14.html">
-                            Brython 繪圖教學 W14
+                        <a href="./jian-li-button.html">
+                            建立button
                         </a>
                     </li>
                 </ul>

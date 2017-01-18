@@ -2,7 +2,7 @@
 <html lang="en"
 >
 <head>
-    <title>單線繞黑點旋轉動畫 - 2016Fall 課程網誌 (虎尾科大MDE)</title>
+    <title>猜數字遊戲(心得) - 2016Fall 課程網誌 (虎尾科大MDE)</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -166,20 +166,20 @@ init_mathjax = function() {
 init_mathjax();
 </script>
 
-<link rel="canonical" href="./dan-xian-rao-hei-dian-xuan-zhuan-dong-hua.html">
+<link rel="canonical" href="./cai-shu-zi-you-xi-xin-de.html">
 
         <meta name="author" content="40523126" />
-        <meta name="keywords" content="W17" />
-        <meta name="description" content="心得:利用一些代數以及基本數學運算使線可以繞著點轉圈" />
+        <meta name="keywords" content="W16" />
+        <meta name="description" content="心得:用一些基本程式語言建立button,然後設定上下限增加遊戲難度,也可以利用系統猜數字看平均幾次會猜中." />
 
         <meta property="og:site_name" content="2016Fall 課程網誌 (虎尾科大MDE)" />
         <meta property="og:type" content="article"/>
-        <meta property="og:title" content="單線繞黑點旋轉動畫"/>
-        <meta property="og:url" content="./dan-xian-rao-hei-dian-xuan-zhuan-dong-hua.html"/>
-        <meta property="og:description" content="心得:利用一些代數以及基本數學運算使線可以繞著點轉圈"/>
-        <meta property="article:published_time" content="2017-01-06" />
+        <meta property="og:title" content="猜數字遊戲(心得)"/>
+        <meta property="og:url" content="./cai-shu-zi-you-xi-xin-de.html"/>
+        <meta property="og:description" content="心得:用一些基本程式語言建立button,然後設定上下限增加遊戲難度,也可以利用系統猜數字看平均幾次會猜中."/>
+        <meta property="article:published_time" content="2016-12-30" />
             <meta property="article:section" content="Misc" />
-            <meta property="article:tag" content="W17" />
+            <meta property="article:tag" content="W16" />
             <meta property="article:author" content="40523126" />
 
 
@@ -287,10 +287,10 @@ init_mathjax();
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="./dan-xian-rao-hei-dian-xuan-zhuan-dong-hua.html"
+                    <a href="./cai-shu-zi-you-xi-xin-de.html"
                        rel="bookmark"
-                       title="Permalink to 單線繞黑點旋轉動畫">
-                        單線繞黑點旋轉動畫
+                       title="Permalink to 猜數字遊戲(心得)">
+                        猜數字遊戲(心得)
                     </a>
                 </h1>
             </header>
@@ -300,7 +300,7 @@ init_mathjax();
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2017-01-06T12:00:00+08:00"> 週五 06 一月 2017</time>
+        <i class="fa fa-calendar"></i><time datetime="2016-12-30T12:01:00+08:00"> 週五 30 十二月 2016</time>
     </span>
             <span class="label label-default">By</span>
             <a href="./author/40523126.html"><i class="fa fa-user"></i> 40523126</a>
@@ -308,17 +308,17 @@ init_mathjax();
 
 
 <span class="label label-default">Tags</span>
-	<a href="./tag/w17.html">W17</a>
+	<a href="./tag/w16.html">W16</a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <p>心得:利用一些代數以及基本數學運算使線可以繞著點轉圈</p>
-
-
+                <p>心得:用一些基本程式語言建立button,然後設定上下限增加遊戲難度,也可以利用系統猜數字看平均幾次會猜中.
+</p>
 <!-- 導入 Brython 標準程式庫 -->
 
-<script type="text/javascript" src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js">
-</script>
+<script type="text/javascript"
+   src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js">
+   </script>
 
 <!-- 啟動 Brython -->
 
@@ -330,156 +330,91 @@ brython(1);
 
 <!-- 以下可以執行  Brython 程式 -->
 
-<canvas id="onebar" width="800" height="400"></canvas>
+<div id="id3"></div>
 
 <script type="text/python3">
 from browser import document
-from browser import window
-from browser import timer
-import math
-canvas = document["onebar"]
-ctx = canvas.getContext("2d")
+from browser import html
+import random
 
-# 畫圓函式
-def circle(x,y,r):
-    ctx.beginPath()
-    ctx.arc(x, y, r, 0, math.pi*2, True)
-    ctx.fill()
-    ctx.closePath()
- #畫直線函式
-def line(x1, y1, x2, y2):
-    # 以下可以利用 ctx 物件進行畫圖
-    # 先畫一條直線
-    ctx.beginPath()
-    # 設定線的寬度為 1 個單位
-    ctx.lineWidth = 1
-    # 將畫筆移動到 (x1, y1) 座標點
-    ctx.moveTo(x1, y1)
-    # 然後畫直線到 (x2, y2) 座標點
-    ctx.lineTo(x2, y2)
-    # 設定顏色為藍色, 也可以使用 "rgb(0, 0, 255)" 字串設定顏色值
-    ctx.strokeStyle = "blue"
-    # 實際執行畫線
-    ctx.stroke()
-    ctx.closePath()
+id3 = document["id3"]
+def guess(ev):
+    # 清除 id3 中的內容
+    id3.clear()
+    id3 <= "開始玩猜數字遊戲" + html.BR()
+    標準答案 = random.randint(1, 100)
+    你猜的數字 = int(input("請輸入您所猜 1~100 間的整數:"))
+    猜測次數 = 1
+    while 標準答案 != 你猜的數字:
+        if 標準答案 < 你猜的數字:
+            #print("太大了，再猜一次 :)加油")
+            # 清除 id3 中的內容
+            id3.clear()
+            id3 <= "太大了，再猜一次 :)加油" + html.BR()
+        else:
+            #print("太小了，再猜一次 :)加油")
+            # 清除 id3 中的內容
+            id3.clear()
+            id3 <= "太小了，再猜一次 :)加油" + html.BR()
+        你猜的數字 = int(input("請輸入您所猜 1~100 間的整數:"))
+        猜測次數 += 1
 
-line(200, 200, 200, 300)
-circle(200, 200, 5)
+    #print("猜對了！總共猜了", 猜測次數, "次")
+    id3 <= "猜對了！答案為" + str(標準答案) + ", 總共猜了" + str(猜測次數) + "次"
 
-x1 = 200
-y1 = 200
-
-r = 100
-deg = math.pi/180
-theta = 0
-
-def animate():
-    global theta
-    # 刷新畫布
-    ctx.clearRect(0, 0, canvas.width, canvas.height)
-    # 逐一重新繪製直線與圓心球
-    x2 = x1 +  r*math.cos(theta*deg)
-    y2 = y1 +  r*math.sin(theta*deg)
-    line(x1, y1, x2, y2)
-
-
-    # 再加一條小線段
-    x3 = x2 + 50
-    y3 = y2 + 50
-    line(x2, y2, x3, y3)
-    x4 = 400
-    y4 = 200
-
-    x5 = x4 - 200 
-    y5 = y4 - 200 
-
-    x5 = x3
-    y5 = y3
-    x5y5x3y3 = 200
-
-    line(x4, y4, x5, y5)
-
-
-    circle(x1, y1, 5)
-    circle(400, y1, 5)
-    theta += 1
-
-timer.set_interval(animate, 50)
+document["but3"].bind("click", guess)
 </script>
 
-<p>以下為程式碼:</p>
-<pre class="brush: python">
+<p><button id="but3">玩猜數字遊戲</button></p>
+<div id="id4"></div>
 
+<script type="text/python3">
+from browser import document
+from browser import html
+import random
 
+id4 = document["id4"]
+def autoguess(ev):
+    執行次數 = 100
+    總猜測次數 = 0
+    for i in range(執行次數):
+        id4 <= "第" + str(i+1) + "次玩:" + html.BR()
+        下限 = 1
+        上限 = 100
+        標準答案 = random.randint(下限, 上限)
+        pc猜的數字 = random.randint(下限, 上限)
+        #print(標準答案, pc猜的數字)
+        #integer int()
+        #string str()
+        #float float()
+        #你猜的數字 = int(input("請輸入您所猜的整數:"))
+        猜測次數 = 1
+        while 標準答案 != pc猜的數字:
+            if 標準答案 < pc猜的數字:
+                #print("太大了，再猜一次 :)加油")
+                # 因此已經確定"pc猜的數字"不是答案, 因此 - 1
+                id4 <= "電腦猜的數字:" + str(pc猜的數字) + " 太大了!" + html.BR()
+                上限 = pc猜的數字 - 1
+            else:
+                #print("太小了，再猜一次 :)加油")
+                # 因此已經確定"pc猜的數字"不是答案, 因此 + 1
+                id4 <= "電腦猜的數字:" + str(pc猜的數字) + " 太小了!" + html.BR()
+                下限 = pc猜的數字 + 1
+            #pc猜的數字 = int(input("請輸入您所猜的整數:"))
+            pc猜的數字 = random.randint(下限, 上限)
+            猜測次數 += 1
 
+        #print("猜對了！總共猜了", 猜測次數, "次")
+        id4 <= "電腦猜對了, 答案為: " + str(標準答案) + ", 總共猜了 "+ str(猜測次數) + "次" + html.BR()
+        總猜測次數 += 猜測次數
+    平均猜測次數 = int(總猜測次數/執行次數)
+    #print("平均次數", 平均猜測次數)
+    id4 <= "平均次數: " + str(平均猜測次數)
 
-
-
-
-# 畫圓函式
-def circle(x,y,r):
-    ctx.beginPath()
-    ctx.arc(x, y, r, 0, math.pi*2, True)
-    ctx.fill()
-    ctx.closePath()
- #畫直線函式
-def line(x1, y1, x2, y2):
-    # 以下可以利用 ctx 物件進行畫圖
-    # 先畫一條直線
-    ctx.beginPath()
-    # 設定線的寬度為 1 個單位
-    ctx.lineWidth = 1
-    # 將畫筆移動到 (x1, y1) 座標點
-    ctx.moveTo(x1, y1)
-    # 然後畫直線到 (x2, y2) 座標點
-    ctx.lineTo(x2, y2)
-    # 設定顏色為藍色, 也可以使用 "rgb(0, 0, 255)" 字串設定顏色值
-    ctx.strokeStyle = "blue"
-    # 實際執行畫線
-    ctx.stroke()
-    ctx.closePath()
-
-line(200, 200, 200, 300)
-circle(200, 200, 5)
-
-x1 = 200
-y1 = 200
-
-r = 100
-deg = math.pi/180
-theta = 0
-
-def animate():
-    global theta
-    # 刷新畫布
-    ctx.clearRect(0, 0, canvas.width, canvas.height)
-    # 逐一重新繪製直線與圓心球
-    x2 = x1 +  r*math.cos(theta*deg)
-    y2 = y1 +  r*math.sin(theta*deg)
-    line(x1, y1, x2, y2)
-    x3 = 400
-    y3 = 200
-    x4 = x3 +  r*math.cos(theta*deg)
-    y4 = y3 +  r*math.sin(theta*deg)
-    line(x3, y3, x4, y4)
-
-
-    # 再加一條小線段
-
-    x5 = x2 + 200
-    y5 = x2 + 200
-    x5 = x4
-    y5 = y4
-    line(x2, y2, x5, y5)
-
-    circle(x1, y1, 5)
-    circle(400, y1, 5)
-    theta += 1
-
-timer.set_interval(animate, 50)
+document["but4"].bind("click", autoguess)
 </script>
 
-</pre>
+<p><button id="but4">利用程式玩猜數字</button></p>
             </div>
             <!-- /.entry-content -->
         </article>
@@ -495,18 +430,18 @@ timer.set_interval(animate, 50)
             <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
                 <ul class="list-group" id="recentposts">
                     <li class="list-group-item">
-                        <a href="./dan-xian-rao-hei-dian-xuan-zhuan-dong-hua.html">
-                            單線繞黑點旋轉動畫
+                        <a href="./dan-xian-rao-hei-dian-xuan-zhuan-dong-hua-xin-de.html">
+                            單線繞黑點旋轉動畫(心得)
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="./cai-shu-zi-you-xi.html">
-                            猜數字遊戲
+                        <a href="./cai-shu-zi-you-xi-xin-de.html">
+                            猜數字遊戲(心得)
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="./brython-hui-tu-jiao-xue-w16.html">
-                            Brython 繪圖教學 W16
+                        <a href="./yuan-dan-kuai-le.html">
+                            元旦快樂
                         </a>
                     </li>
                     <li class="list-group-item">
@@ -515,8 +450,8 @@ timer.set_interval(animate, 50)
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="./brython-hui-tu-jiao-xue-w14.html">
-                            Brython 繪圖教學 W14
+                        <a href="./jian-li-button.html">
+                            建立button
                         </a>
                     </li>
                 </ul>
