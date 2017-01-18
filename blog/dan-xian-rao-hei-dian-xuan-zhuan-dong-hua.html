@@ -2,7 +2,7 @@
 <html lang="en"
 >
 <head>
-    <title>Brython 繪圖教學 W17 - 2016Fall 課程網誌 (虎尾科大MDE)</title>
+    <title>單線繞黑點旋轉動畫 - 2016Fall 課程網誌 (虎尾科大MDE)</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -166,17 +166,17 @@ init_mathjax = function() {
 init_mathjax();
 </script>
 
-<link rel="canonical" href="./brython-hui-tu-jiao-xue-w17.html">
+<link rel="canonical" href="./dan-xian-rao-hei-dian-xuan-zhuan-dong-hua.html">
 
         <meta name="author" content="40523126" />
         <meta name="keywords" content="W17" />
-        <meta name="description" content="單線繞黑點旋轉動畫" />
+        <meta name="description" content="心得:利用一些代數以及基本數學運算使線可以繞著點轉圈" />
 
         <meta property="og:site_name" content="2016Fall 課程網誌 (虎尾科大MDE)" />
         <meta property="og:type" content="article"/>
-        <meta property="og:title" content="Brython 繪圖教學 W17"/>
-        <meta property="og:url" content="./brython-hui-tu-jiao-xue-w17.html"/>
-        <meta property="og:description" content="單線繞黑點旋轉動畫"/>
+        <meta property="og:title" content="單線繞黑點旋轉動畫"/>
+        <meta property="og:url" content="./dan-xian-rao-hei-dian-xuan-zhuan-dong-hua.html"/>
+        <meta property="og:description" content="心得:利用一些代數以及基本數學運算使線可以繞著點轉圈"/>
         <meta property="article:published_time" content="2017-01-06" />
             <meta property="article:section" content="Misc" />
             <meta property="article:tag" content="W17" />
@@ -287,10 +287,10 @@ init_mathjax();
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="./brython-hui-tu-jiao-xue-w17.html"
+                    <a href="./dan-xian-rao-hei-dian-xuan-zhuan-dong-hua.html"
                        rel="bookmark"
-                       title="Permalink to Brython 繪圖教學 W17">
-                        Brython 繪圖教學 W17
+                       title="Permalink to 單線繞黑點旋轉動畫">
+                        單線繞黑點旋轉動畫
                     </a>
                 </h1>
             </header>
@@ -312,7 +312,7 @@ init_mathjax();
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <p>單線繞黑點旋轉動畫</p>
+                <p>心得:利用一些代數以及基本數學運算使線可以繞著點轉圈</p>
 
 
 <!-- 導入 Brython 標準程式庫 -->
@@ -408,8 +408,16 @@ timer.set_interval(animate, 50)
 </script>
 
 <p>以下為程式碼:</p>
-<h1>畫圓函式</h1>
-<p>def circle(x,y,r):
+<pre class="brush: python">
+
+
+
+
+
+
+
+# 畫圓函式
+def circle(x,y,r):
     ctx.beginPath()
     ctx.arc(x, y, r, 0, math.pi*2, True)
     ctx.fill()
@@ -429,67 +437,49 @@ def line(x1, y1, x2, y2):
     ctx.strokeStyle = "blue"
     # 實際執行畫線
     ctx.stroke()
-    ctx.closePath()</p>
-<p>line(200, 200, 200, 300)
-circle(200, 200, 5)</p>
-<p>x1 = 200
-y1 = 200</p>
-<p>r = 100
+    ctx.closePath()
+
+line(200, 200, 200, 300)
+circle(200, 200, 5)
+
+x1 = 200
+y1 = 200
+
+r = 100
 deg = math.pi/180
-theta = 0</p>
-<p>def animate():
+theta = 0
+
+def animate():
     global theta
     # 刷新畫布
     ctx.clearRect(0, 0, canvas.width, canvas.height)
     # 逐一重新繪製直線與圓心球
-    x2 = x1 +  r<em>math.cos(theta</em>deg)
-    y2 = y1 +  r<em>math.sin(theta</em>deg)
-    line(x1, y1, x2, y2)</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20</pre></div></td><td class="code"><div class="codehilite"><pre><span></span># 再加一條小線段
-x3 = x2 + 50
-y3 = y2 + 50
-line(x2, y2, x3, y3)
-x4 = 400
-y4 = 200
-
-x5 = x4 - 200 
-y5 = y4 - 200
-
-x5 = x3
-y5 = y3
-x5y5x3y3 = 200
-
-line(x4, y4, x5, y5)
+    x2 = x1 +  r*math.cos(theta*deg)
+    y2 = y1 +  r*math.sin(theta*deg)
+    line(x1, y1, x2, y2)
+    x3 = 400
+    y3 = 200
+    x4 = x3 +  r*math.cos(theta*deg)
+    y4 = y3 +  r*math.sin(theta*deg)
+    line(x3, y3, x4, y4)
 
 
-circle(x1, y1, 5)
-circle(400, y1, 5)
-theta += 1
-</pre></div>
-</td></tr></table>
+    # 再加一條小線段
 
-<p>timer.set_interval(animate, 50)
+    x5 = x2 + 200
+    y5 = x2 + 200
+    x5 = x4
+    y5 = y4
+    line(x2, y2, x5, y5)
+
+    circle(x1, y1, 5)
+    circle(400, y1, 5)
+    theta += 1
+
+timer.set_interval(animate, 50)
 </script>
-</pre></p>
+
+</pre>
             </div>
             <!-- /.entry-content -->
         </article>
@@ -505,8 +495,8 @@ theta += 1
             <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
                 <ul class="list-group" id="recentposts">
                     <li class="list-group-item">
-                        <a href="./brython-hui-tu-jiao-xue-w17.html">
-                            Brython 繪圖教學 W17
+                        <a href="./dan-xian-rao-hei-dian-xuan-zhuan-dong-hua.html">
+                            單線繞黑點旋轉動畫
                         </a>
                     </li>
                     <li class="list-group-item">

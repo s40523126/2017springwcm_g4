@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>2016Fall 課程網誌 (虎尾科大MDE)</title><link href="./" rel="alternate"></link><link href="./feeds/misc.atom.xml" rel="self"></link><id>./</id><updated>2017-01-06T12:00:00+08:00</updated><entry><title>Brython 繪圖教學 W17</title><link href="./brython-hui-tu-jiao-xue-w17.html" rel="alternate"></link><published>2017-01-06T12:00:00+08:00</published><updated>2017-01-06T12:00:00+08:00</updated><author><name>40523126</name></author><id>tag:,2017-01-06:./brython-hui-tu-jiao-xue-w17.html</id><summary type="html">&lt;p&gt;單線繞黑點旋轉動畫&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>2016Fall 課程網誌 (虎尾科大MDE)</title><link href="./" rel="alternate"></link><link href="./feeds/misc.atom.xml" rel="self"></link><id>./</id><updated>2017-01-06T12:00:00+08:00</updated><entry><title>單線繞黑點旋轉動畫</title><link href="./dan-xian-rao-hei-dian-xuan-zhuan-dong-hua.html" rel="alternate"></link><published>2017-01-06T12:00:00+08:00</published><updated>2017-01-06T12:00:00+08:00</updated><author><name>40523126</name></author><id>tag:,2017-01-06:./dan-xian-rao-hei-dian-xuan-zhuan-dong-hua.html</id><summary type="html">&lt;p&gt;心得:利用一些代數以及基本數學運算使線可以繞著點轉圈&lt;/p&gt;
 
 
 &lt;!-- 導入 Brython 標準程式庫 --&gt;
@@ -95,8 +95,16 @@ timer.set_interval(animate, 50)
 &lt;/script&gt;
 
 &lt;p&gt;以下為程式碼:&lt;/p&gt;
-&lt;h1&gt;畫圓函式&lt;/h1&gt;
-&lt;p&gt;def circle(x,y,r):
+&lt;pre class="brush: python"&gt;
+
+
+
+
+
+
+
+# 畫圓函式
+def circle(x,y,r):
     ctx.beginPath()
     ctx.arc(x, y, r, 0, math.pi*2, True)
     ctx.fill()
@@ -116,67 +124,49 @@ def line(x1, y1, x2, y2):
     ctx.strokeStyle = "blue"
     # 實際執行畫線
     ctx.stroke()
-    ctx.closePath()&lt;/p&gt;
-&lt;p&gt;line(200, 200, 200, 300)
-circle(200, 200, 5)&lt;/p&gt;
-&lt;p&gt;x1 = 200
-y1 = 200&lt;/p&gt;
-&lt;p&gt;r = 100
+    ctx.closePath()
+
+line(200, 200, 200, 300)
+circle(200, 200, 5)
+
+x1 = 200
+y1 = 200
+
+r = 100
 deg = math.pi/180
-theta = 0&lt;/p&gt;
-&lt;p&gt;def animate():
+theta = 0
+
+def animate():
     global theta
     # 刷新畫布
     ctx.clearRect(0, 0, canvas.width, canvas.height)
     # 逐一重新繪製直線與圓心球
-    x2 = x1 +  r&lt;em&gt;math.cos(theta&lt;/em&gt;deg)
-    y2 = y1 +  r&lt;em&gt;math.sin(theta&lt;/em&gt;deg)
-    line(x1, y1, x2, y2)&lt;/p&gt;
-&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# 再加一條小線段
-x3 = x2 + 50
-y3 = y2 + 50
-line(x2, y2, x3, y3)
-x4 = 400
-y4 = 200
-
-x5 = x4 - 200 
-y5 = y4 - 200
-
-x5 = x3
-y5 = y3
-x5y5x3y3 = 200
-
-line(x4, y4, x5, y5)
+    x2 = x1 +  r*math.cos(theta*deg)
+    y2 = y1 +  r*math.sin(theta*deg)
+    line(x1, y1, x2, y2)
+    x3 = 400
+    y3 = 200
+    x4 = x3 +  r*math.cos(theta*deg)
+    y4 = y3 +  r*math.sin(theta*deg)
+    line(x3, y3, x4, y4)
 
 
-circle(x1, y1, 5)
-circle(400, y1, 5)
-theta += 1
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+    # 再加一條小線段
 
-&lt;p&gt;timer.set_interval(animate, 50)
+    x5 = x2 + 200
+    y5 = x2 + 200
+    x5 = x4
+    y5 = y4
+    line(x2, y2, x5, y5)
+
+    circle(x1, y1, 5)
+    circle(400, y1, 5)
+    theta += 1
+
+timer.set_interval(animate, 50)
 &lt;/script&gt;
-&lt;/pre&gt;&lt;/p&gt;</summary><category term="W17"></category></entry><entry><title>猜數字遊戲</title><link href="./cai-shu-zi-you-xi.html" rel="alternate"></link><published>2016-12-30T12:01:00+08:00</published><updated>2016-12-30T12:01:00+08:00</updated><author><name>40523126</name></author><id>tag:,2016-12-30:./cai-shu-zi-you-xi.html</id><summary type="html">&lt;!-- PELICAN_END_SUMMARY --&gt;
+
+&lt;/pre&gt;</summary><category term="W17"></category></entry><entry><title>猜數字遊戲</title><link href="./cai-shu-zi-you-xi.html" rel="alternate"></link><published>2016-12-30T12:01:00+08:00</published><updated>2016-12-30T12:01:00+08:00</updated><author><name>40523126</name></author><id>tag:,2016-12-30:./cai-shu-zi-you-xi.html</id><summary type="html">&lt;!-- PELICAN_END_SUMMARY --&gt;
 
 &lt;!-- 導入 Brython 標準程式庫 --&gt;
 
@@ -489,7 +479,8 @@ document['ch01'].bind('click',get_input)
 
 &lt;!-- 導入 Brython 標準程式庫 --&gt;
 
-&lt;script type="text/javascript" src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js"&gt;
+&lt;script type="text/javascript" 
+    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js"&gt;
 &lt;/script&gt;
 
 &lt;!-- 啟動 Brython --&gt;
@@ -559,7 +550,12 @@ def canvasText(x, y, fontSize, string, sup, sub, color, ctx):
 w = 20
 h = 30
 background(100, 100, w, h, 5, 5, ctx)
-canvasText(100,  80, 20, "A", "b", "", "black", ctx)
+mylist = ["E", "A", "D", "G", "B", "E"]
+num = 0
+for s in mylist:
+    #canvasText(100,  80, 20, "A", "b", "", "black", ctx)
+    canvasText(100+num*w,  80, 20, s, "", "", "black", ctx)
+    num = num + 1
 &lt;/script&gt;</summary><category term="使用導引"></category></entry><entry><title>Brython 繪圖教學</title><link href="./brython-hui-tu-jiao-xue.html" rel="alternate"></link><published>2016-11-18T12:00:00+08:00</published><updated>2016-11-18T12:00:00+08:00</updated><author><name>40523126</name></author><id>tag:,2016-11-18:./brython-hui-tu-jiao-xue.html</id><summary type="html">&lt;p&gt;繪圖流程, 導入程式庫, 啟動, 然後引用各種模組開始繪圖&lt;/p&gt;
 
 &lt;!-- 導入 Brython 標準程式庫 --&gt;
