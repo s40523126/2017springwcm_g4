@@ -252,12 +252,6 @@ init_mathjax();
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                         <li><a href="./pages/about/">
-                             About
-                          </a></li>
-                        <li >
-                            <a href="./category/misc.html">Misc</a>
-                        </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li><span>
@@ -277,193 +271,6 @@ init_mathjax();
     <div class="row">
         <div class="col-sm-9">
 
-            <article>
-                <h2><a href="./dan-xian-rao-hei-dian-xuan-zhuan-dong-hua-xin-de.html">單線繞黑點旋轉動畫(心得)</a></h2>
-                <div class="summary"><p>心得:利用一些代數以及基本數學運算使線可以繞著點轉圈</p>
-
-                    <a class="btn btn-default btn-xs" href="./dan-xian-rao-hei-dian-xuan-zhuan-dong-hua-xin-de.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="./cai-shu-zi-you-xi-xin-de.html">猜數字遊戲(心得)</a></h2>
-                <div class="summary"><p>心得:用一些基本程式語言建立button,然後設定上下限增加遊戲難度,也可以利用系統猜數字看平均幾次會猜中.
-
-                    <a class="btn btn-default btn-xs" href="./cai-shu-zi-you-xi-xin-de.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="./yuan-dan-kuai-le.html">元旦快樂</a></h2>
-                <div class="summary"><p>2017 年元旦快樂
-按下按鈕產生6個樂透數字!!!</p>
-
-                    <a class="btn btn-default btn-xs" href="./yuan-dan-kuai-le.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="./brython-hui-tu-jiao-xue-w15.html">Brython 繪圖教學 W15</a></h2>
-                <div class="summary"><!-- 導入 Brython 標準程式庫 -->
-
-<script type="text/javascript" 
-    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js">
-</script>
-
-<!-- 啟動 Brython -->
-
-<script>
-window.onload=function(){
-brython(1);
-}
-</script>
-
-<!-- 以下可以執行  Brython 程式 -->
-
-<div id="con"></div>
-
-<script type="text/python3">
-from browser import document as do
-from browser import html
-c = do["con"]
-def compa(e):
-    your_input = input("請輸入一個整數!")
-    # 如何判斷所輸入的整數比 10 大
-
-    if int(your_input) > 10:
-        c <= "所輸入的整數:" + your_input ...</script></!--></!--></!-->
-                    <a class="btn btn-default btn-xs" href="./brython-hui-tu-jiao-xue-w15.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="./jian-li-button.html">建立button</a></h2>
-                <div class="summary"><p>範例:自己的學號</p>
-<!-- 導入 Brython 標準程式庫 -->
-
-<script type="text/javascript" 
-    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js">
-</script>
-
-<!-- 啟動 Brython -->
-
-<script>
-window.onload=function(){
-brython(1);
-}
-</script>
-
-<!-- ch01 基本的列印與輸入函式 -->
-
-<script type="text/python3">
-from browser import document
-from browser import alert
-
-'''
-    # 利用 input() 取得使用者輸入, 然後進行資料處理或運算後, 列出結果
-    #01-01.py
-    print ("Hello World!")
-    #01-02.py
-    thetext = input("Enter some text ")
-    print ("This ...</script></!--></!--></!-->
-                    <a class="btn btn-default btn-xs" href="./jian-li-button.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="./brython-hui-tu-jiao-xue-w13.html">Brython 繪圖教學 W13</a></h2>
-                <div class="summary"><p>將 <a href="http://mde.tw/2016fallcp/course/Python3Programs.txt">http://mde.tw/2016fallcp/course/Python3Programs.txt</a> 整理成brython</p>
-
-                    <a class="btn btn-default btn-xs" href="./brython-hui-tu-jiao-xue-w13.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="./ji-ta-he-xian-xin-de.html">吉他和弦(心得)</a></h2>
-                <div class="summary"><p>繪圖流程, 導入程式庫, 啟動, 然後引用各種模組開始繪圖</p>
-
-<p>心得:利用ctx(設定線寬高等等),再用list把1~6條弦名標示出來,如果要用和弦等等再插入其他指令.
-<!-- 導入 Brython 標準程式庫 --></p>
-<script type="text/javascript" 
-    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js">
-</script>
-
-<!-- 啟動 Brython -->
-
-<script>
-window.onload=function(){
-brython(1);
-}
-</script>
-
-<!-- 以下實際利用  Brython 畫圖 -->
-
-<canvas id="chord1" width="600" height="400"></canvas>
-
-<script type="text/python3">
-from browser import document as doc
-import math
-# 準備繪圖畫布
-canvas = doc["chord1"]
-ctx = canvas.getContext("2d")
-
-def background(x ...</script></!--></!-->
-                    <a class="btn btn-default btn-xs" href="./ji-ta-he-xian-xin-de.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="./brython-hui-tu-jiao-xue.html">Brython 繪圖教學</a></h2>
-                <div class="summary"><p>繪圖流程, 導入程式庫, 啟動, 然後引用各種模組開始繪圖</p>
-
-<!-- 導入 Brython 標準程式庫 -->
-
-<script type="text/javascript" 
-    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js">
-</script>
-
-<!-- 啟動 Brython -->
-
-<script>
-window.onload=function(){
-brython(1);
-}
-</script>
-
-<!-- 以下實際利用  Brython 畫兩條直線 -->
-
-<canvas id="guitar" width="600" height="200"></canvas>
-
-<script type="text/python3">
-from browser import document as doc
-import math
-
-canvas = doc["guitar"]
-ctx = canvas.getContext("2d")
-ctx.beginPath()
-ctx.lineWidth = 1
-inc = 5
-for i in ...</script></!--></!--></!-->
-                    <a class="btn btn-default btn-xs" href="./brython-hui-tu-jiao-xue.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="./2016fall-ji-jie-she-ji-ji-suan-ji-cheng-shi-jiao-xue.html">2016Fall 機械設計計算機程式教學</a></h2>
-                <div class="summary"><p>本課程提供學生紮實之物件導向或式概念、Python程式語言訓練，本課程強調程式核心技術之撰寫經驗，包括：決策控制、迴圈、動畫、人機互動、集合與陣列。
-教導機械設計系的學生如何用創造力以及想像力發揮到最好。</p>
-                    <a class="btn btn-default btn-xs" href="./2016fall-ji-jie-she-ji-ji-suan-ji-cheng-shi-jiao-xue.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="./2016fall-jian-bao-yu-wang-zhi-xi-tong.html">2016Fall 簡報與網誌系統</a></h2>
-                <div class="summary"><p>這個系統共集結了 reveal.js 網際簡報與 pelican 靜態網誌系統.</p>
-
-                    <a class="btn btn-default btn-xs" href="./2016fall-jian-bao-yu-wang-zhi-xi-tong.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
 
         </div>
         <div class="col-sm-3" id="sidebar">
@@ -474,41 +281,11 @@ for i in ...</script></!--></!--></!-->
 
             <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
                 <ul class="list-group" id="recentposts">
-                    <li class="list-group-item">
-                        <a href="./dan-xian-rao-hei-dian-xuan-zhuan-dong-hua-xin-de.html">
-                            單線繞黑點旋轉動畫(心得)
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="./cai-shu-zi-you-xi-xin-de.html">
-                            猜數字遊戲(心得)
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="./yuan-dan-kuai-le.html">
-                            元旦快樂
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="./brython-hui-tu-jiao-xue-w15.html">
-                            Brython 繪圖教學 W15
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="./jian-li-button.html">
-                            建立button
-                        </a>
-                    </li>
                 </ul>
             </li>
 
             <li class="list-group-item"><a href="./categories.html"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4></a>
                 <ul class="list-group" id="categories">
-                    <li class="list-group-item">
-                        <a href="./category/misc.html">
-                            <i class="fa fa-folder-open fa-lg"></i> Misc
-                        </a>
-                    </li>
                 </ul>
             </li>
 
@@ -550,7 +327,7 @@ for i in ...</script></!--></!--></!-->
    <div class="container">
       <hr>
       <div class="row">
-         <div class="col-xs-10">&copy; 2017 KMOL
+         <div class="col-xs-10">&copy;  KMOL
             &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
             <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
             <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
