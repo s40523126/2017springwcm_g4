@@ -52,6 +52,7 @@
 <v t="amd.20151215170350.1"><vh>以下為 content 目錄中的 md 檔案</vh></v>
 <v t="amd.20151216001126.1"><vh>md 檔案範例</vh></v>
 <v t="amd.20151215170031.1" a="E"><vh>@path ./../content</vh>
+<v t="leo.20170623060618.1"><vh>@edit 20170623.md</vh></v>
 <v t="leo.20170623055918.1"><vh>@edit 20170622.md</vh></v>
 <v t="leo.20170623053132.1" a="E"><vh>@auto Y:/123/2017springwcm_hw/content/20170428.md</vh></v>
 <v t="leo.20170623053231.1" a="E"><vh>@auto Y:/123/2017springwcm_hw/content/20170621.md</vh></v>
