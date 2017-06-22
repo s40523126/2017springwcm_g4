@@ -52,11 +52,11 @@
 <v t="amd.20151215170350.1"><vh>以下為 content 目錄中的 md 檔案</vh></v>
 <v t="amd.20151216001126.1"><vh>md 檔案範例</vh></v>
 <v t="amd.20151215170031.1"><vh>@path ./../content</vh></v>
-<v t="leo.20170623044807.1"><vh>@edit 20170623.md</vh></v>
-<v t="leo.20170623045338.1"><vh>@edit 20170620.md</vh></v>
-<v t="leo.20170623042747.1"><vh>@edit 20170428.md</vh></v>
-<v t="leo.20170623042746.1"><vh>@edit 20170621.md</vh></v>
-<v t="leo.20170623042745.1"><vh>@edit 20170622.md</vh></v>
+<v t="leo.20170623044807.1"><vh>@edit 201706.23.md</vh></v>
+<v t="leo.20170623045338.1"><vh>@edit 201706.20.md</vh></v>
+<v t="leo.20170623042747.1"><vh>@edit 201704.28.md</vh></v>
+<v t="leo.20170623042746.1"><vh>@edit 201706.21.md</vh></v>
+<v t="leo.20170623042745.1"><vh>@edit 201706.22.md</vh></v>
 <v t="leo.20170428004003.1"><vh>@button https server</vh></v>
 <v t="leo.20170623034230.1"><vh>newHeadline</vh></v>
 </vnodes>
