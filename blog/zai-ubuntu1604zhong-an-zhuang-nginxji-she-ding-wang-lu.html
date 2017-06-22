@@ -2,7 +2,7 @@
 <html lang="en"
 >
 <head>
-    <title>網路線的製作方法 - 2017springwcm_g4 (虎尾科大MDE)</title>
+    <title>在Ubuntu16.04中安裝nginx及設定網路 - 2017springwcm_g4 (虎尾科大MDE)</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -166,17 +166,17 @@ init_mathjax = function() {
 init_mathjax();
 </script>
 
-<link rel="canonical" href="./wang-lu-xian-de-zhi-zuo-fang-fa.html">
+<link rel="canonical" href="./zai-ubuntu1604zhong-an-zhuang-nginxji-she-ding-wang-lu.html">
 
         <meta name="author" content="40523126" />
-        <meta name="description" content="工具: RJ-45 壓線鉗 剝線工具 (剝線鉗或美工刀) 斜口鉗 材料: 8 蕊網路線 (需要長度) RJ-45 接頭 護套 (可有可無) 製作步驟 1. 先將網路線剝開 2. 按照網路線色對規則排好順序 3. 將線對整理好並剪齊 (約 1.5 公分) 4. 插入 RJ-45 接頭以壓線鉗壓製即可完成 (務必將線對插到底，以免造成傳輸品質不良) 網路線色對規則 1. 一般傳輸用網路線色對規則 (兩端的網路頭皆為以下接法) 白橙、橙、白綠、藍、白藍、綠、白棕、棕 兩台電腦資料對傳用色對規則 (又稱跳接法、一頭以正常傳輸色對接法、另一頭則為以下接法) 白綠、綠、白橙 ..." />
+        <meta name="description" content="安裝完Ubuntu後,需要建立網路,才能夠上網. 首先開啟Ubuntu主機後,輸入:sudo apt update之後 再輸入sudo apt install nginx 建立一個網站 之後輸入ifconfig 會出現ip ,進而去瀏覽器輸入網址 若有出現網址等於成功. bandicam 2017-04-28 00-18-34-329 from James Chang on Vimeo." />
 
         <meta property="og:site_name" content="2017springwcm_g4 (虎尾科大MDE)" />
         <meta property="og:type" content="article"/>
-        <meta property="og:title" content="網路線的製作方法"/>
-        <meta property="og:url" content="./wang-lu-xian-de-zhi-zuo-fang-fa.html"/>
-        <meta property="og:description" content="工具: RJ-45 壓線鉗 剝線工具 (剝線鉗或美工刀) 斜口鉗 材料: 8 蕊網路線 (需要長度) RJ-45 接頭 護套 (可有可無) 製作步驟 1. 先將網路線剝開 2. 按照網路線色對規則排好順序 3. 將線對整理好並剪齊 (約 1.5 公分) 4. 插入 RJ-45 接頭以壓線鉗壓製即可完成 (務必將線對插到底，以免造成傳輸品質不良) 網路線色對規則 1. 一般傳輸用網路線色對規則 (兩端的網路頭皆為以下接法) 白橙、橙、白綠、藍、白藍、綠、白棕、棕 兩台電腦資料對傳用色對規則 (又稱跳接法、一頭以正常傳輸色對接法、另一頭則為以下接法) 白綠、綠、白橙 ..."/>
-        <meta property="article:published_time" content="2017-06-23" />
+        <meta property="og:title" content="在Ubuntu16.04中安裝nginx及設定網路"/>
+        <meta property="og:url" content="./zai-ubuntu1604zhong-an-zhuang-nginxji-she-ding-wang-lu.html"/>
+        <meta property="og:description" content="安裝完Ubuntu後,需要建立網路,才能夠上網. 首先開啟Ubuntu主機後,輸入:sudo apt update之後 再輸入sudo apt install nginx 建立一個網站 之後輸入ifconfig 會出現ip ,進而去瀏覽器輸入網址 若有出現網址等於成功. bandicam 2017-04-28 00-18-34-329 from James Chang on Vimeo."/>
+        <meta property="article:published_time" content="2017-06-22" />
             <meta property="article:section" content="網際內容管理" />
             <meta property="article:author" content="40523126" />
 
@@ -282,10 +282,10 @@ init_mathjax();
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="./wang-lu-xian-de-zhi-zuo-fang-fa.html"
+                    <a href="./zai-ubuntu1604zhong-an-zhuang-nginxji-she-ding-wang-lu.html"
                        rel="bookmark"
-                       title="Permalink to 網路線的製作方法">
-                        網路線的製作方法
+                       title="Permalink to 在Ubuntu16.04中安裝nginx及設定網路">
+                        在Ubuntu16.04中安裝nginx及設定網路
                     </a>
                 </h1>
             </header>
@@ -295,7 +295,7 @@ init_mathjax();
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2017-06-23T03:52:21.404236+08:00"> 週五 23 六月 2017</time>
+        <i class="fa fa-calendar"></i><time datetime="2017-06-22T23:20:54.612728+08:00"> 週四 22 六月 2017</time>
     </span>
             <span class="label label-default">By</span>
             <a href="./author/40523126.html"><i class="fa fa-user"></i> 40523126</a>
@@ -305,32 +305,14 @@ init_mathjax();
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <p>工具:
-RJ-45 壓線鉗
-剝線工具 (剝線鉗或美工刀)
-斜口鉗
-材料:
-8 蕊網路線 (需要長度)
-RJ-45 接頭 
-護套 (可有可無)
-製作步驟
-1. 先將網路線剝開
-2. 按照網路線色對規則排好順序
-3. 將線對整理好並剪齊 (約 1.5 公分)
-4. 插入 RJ-45 接頭以壓線鉗壓製即可完成 (務必將線對插到底，以免造成傳輸品質不良)
-網路線色對規則
-1. 一般傳輸用網路線色對規則 (兩端的網路頭皆為以下接法)
-白橙、橙、白綠、藍、白藍、綠、白棕、棕</p>
-<ol>
-<li>兩台電腦資料對傳用色對規則 (又稱跳接法、一頭以正常傳輸色對接法、另一頭則為以下接法)
-白綠、綠、白橙、藍、白藍、橙、白棕、棕 (橙綠對調)</li>
-</ol>
-<p>◆RJ-45 跳線 (CrossOver) 補充說明
-跳線原理就是要把 A 電腦的發送端傳輸到 B 電腦的接收端 (送收對調)，如此才可以送收資料，因此要跳線
-而一般網路線主要是以 1, 2, 3, 6 用為傳送接收訊號，所以可以發現跳線對調的顏色就是 1, 2, 3, 6
-備註：HUB 會替你把不同電腦的發送和接收對接，所以透過 HUB 就不要跳線</p>
-<p>一頭 = 白橙、橙、白綠、藍、白藍、綠、白棕、棕
-另一頭 = 白綠、綠、白橙、藍、白藍、橙、白棕、棕</p>
+                <p>安裝完Ubuntu後,需要建立網路,才能夠上網.</p>
+<p>首先開啟Ubuntu主機後,輸入:sudo apt update之後</p>
+<p>再輸入sudo apt install nginx 建立一個網站</p>
+<p>之後輸入ifconfig 會出現ip ,進而去瀏覽器輸入網址</p>
+<p>若有出現網址等於成功.</p>
+<iframe src="https://player.vimeo.com/video/215042647" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+<p><a href="https://vimeo.com/215042647">bandicam 2017-04-28 00-18-34-329</a> from <a href="https://vimeo.com/user57302706">James Chang</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
             </div>
             <!-- /.entry-content -->
         </article>

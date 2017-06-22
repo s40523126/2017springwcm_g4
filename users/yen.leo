@@ -50,13 +50,11 @@
 </v>
 </v>
 <v t="amd.20151215170350.1"><vh>以下為 content 目錄中的 md 檔案</vh></v>
+<v t="leo.20170623042424.1"><vh>@edit 20170428.md</vh></v>
+<v t="leo.20170623042425.1"><vh>@edit 20170621.md</vh></v>
+<v t="leo.20170623042426.1"><vh>@edit 20170622.md</vh></v>
 <v t="amd.20151216001126.1"><vh>md 檔案範例</vh></v>
-<v t="leo.20170428004130.1"><vh></vh></v>
-<v t="amd.20151215170031.1" a="E"><vh>@path ./../content</vh>
-<v t="leo.20170623041657.1"><vh>@edit 20170621.md</vh></v>
-<v t="leo.20170428004252.1"><vh>@edit 20170428.md</vh></v>
-<v t="leo.20170623034225.1"><vh>@edit 20170622.md</vh></v>
-</v>
+<v t="amd.20151215170031.1"><vh>@path ./../content</vh></v>
 <v t="leo.20170428004003.1"><vh>@button https server</vh></v>
 <v t="leo.20170623034230.1"><vh>newHeadline</vh></v>
 </vnodes>
@@ -220,7 +218,6 @@ def domake():
 # 利用執行緒執行 https 伺服器
 make = threading.Thread(target=domake)
 make.start()</t>
-<t tx="leo.20170428004130.1"></t>
 <t tx="leo.20170623034230.1"></t>
 </tnodes>
 </leo_file>
