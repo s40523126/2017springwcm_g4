@@ -9,7 +9,7 @@
 <preferences/>
 <find_panel_settings/>
 <vnodes>
-<v t="leo.20151212173315.1"><vh>@settings</vh>
+<v t="leo.20151212173315.1" a="E"><vh>@settings</vh>
 <v t="leo.20151212173315.2"><vh>@data qt-gui-plugin-style-sheet</vh></v>
 <v t="leo.20151212173315.3"><vh>@string initial_split_orientation = horizontal</vh></v>
 </v>
@@ -52,6 +52,7 @@
 <v t="amd.20151215170350.1"><vh>以下為 content 目錄中的 md 檔案</vh></v>
 <v t="amd.20151216001126.1"><vh>md 檔案範例</vh></v>
 <v t="amd.20151215170031.1"><vh>@path ./../content</vh></v>
+<v t="leo.20170623044526.1"><vh>@edit 20170623.md</vh></v>
 <v t="leo.20170623042747.1"><vh>@edit 20170428.md</vh></v>
 <v t="leo.20170623042746.1"><vh>@edit 20170621.md</vh></v>
 <v t="leo.20170623042745.1"><vh>@edit 20170622.md</vh></v>
