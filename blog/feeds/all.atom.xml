@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>2017springwcm_g4 (虎尾科大MDE)</title><link href="./" rel="alternate"></link><link href="./feeds/all.atom.xml" rel="self"></link><id>./</id><updated>2017-06-23T03:44:36+08:00</updated><entry><title>網路線的製作方法</title><link href="./wang-lu-xian-de-zhi-zuo-fang-fa.html" rel="alternate"></link><published>2017-06-23T03:44:36+08:00</published><updated>2017-06-23T03:44:36+08:00</updated><author><name>40523126</name></author><id>tag:,2017-06-23:./wang-lu-xian-de-zhi-zuo-fang-fa.html</id><summary type="html">&lt;p&gt;工具:
+<feed xmlns="http://www.w3.org/2005/Atom"><title>2017springwcm_g4 (虎尾科大MDE)</title><link href="./" rel="alternate"></link><link href="./feeds/all.atom.xml" rel="self"></link><id>./</id><updated>2017-06-23T04:17:25+08:00</updated><entry><title>如何設定ipv6網路</title><link href="./ru-he-she-ding-ipv6wang-lu.html" rel="alternate"></link><published>2017-06-23T04:17:25+08:00</published><updated>2017-06-23T04:17:25+08:00</updated><author><name>40523126</name></author><id>tag:,2017-06-23:./ru-he-she-ding-ipv6wang-lu.html</id><summary type="html">&lt;p&gt;進入網路共用中心之後,點開乙太網路內容,將第四版的Ipv4先關掉,將第六版的Ipv6開啟,
+點開DNS伺服器慣用DNS伺服器:輸入學校的IPV6 IP,其他DNS伺服器:中華電信的IPV6 IP,
+之後點開Proxy設定&amp;gt;Lan設定,Proxy輸入學校的Ipv6網址,連接阜輸入3128&amp;gt;連線成功。&lt;/p&gt;</summary></entry><entry><title>如何設定ipv6網路</title><link href="./ru-he-she-ding-ipv6wang-lu.html" rel="alternate"></link><published>2017-06-23T04:17:25+08:00</published><updated>2017-06-23T04:17:25+08:00</updated><author><name>40523126</name></author><id>tag:,2017-06-23:./ru-he-she-ding-ipv6wang-lu.html</id><summary type="html">&lt;p&gt;進入網路共用中心之後,點開乙太網路內容,將第四版的Ipv4先關掉,將第六版的Ipv6開啟,
+點開DNS伺服器慣用DNS伺服器:輸入學校的IPV6 IP,其他DNS伺服器:中華電信的IPV6 IP,
+之後點開Proxy設定&amp;gt;Lan設定,Proxy輸入學校的Ipv6網址,連接阜輸入3128&amp;gt;連線成功。&lt;/p&gt;</summary></entry><entry><title>網路線的製作方法</title><link href="./wang-lu-xian-de-zhi-zuo-fang-fa.html" rel="alternate"></link><published>2017-06-23T03:52:21+08:00</published><updated>2017-06-23T03:52:21+08:00</updated><author><name>40523126</name></author><id>tag:,2017-06-23:./wang-lu-xian-de-zhi-zuo-fang-fa.html</id><summary type="html">&lt;p&gt;工具:
 RJ-45 壓線鉗
 剝線工具 (剝線鉗或美工刀)
 斜口鉗
@@ -24,7 +28,11 @@ RJ-45 接頭
 而一般網路線主要是以 1, 2, 3, 6 用為傳送接收訊號，所以可以發現跳線對調的顏色就是 1, 2, 3, 6
 備註：HUB 會替你把不同電腦的發送和接收對接，所以透過 HUB 就不要跳線&lt;/p&gt;
 &lt;p&gt;一頭 = 白橙、橙、白綠、藍、白藍、綠、白棕、棕
-另一頭 = 白綠、綠、白橙、藍、白藍、橙、白棕、棕&lt;/p&gt;</summary></entry><entry><title>在Ubuntu16.04中安裝nginx及設定網路</title><link href="./zai-ubuntu1604zhong-an-zhuang-nginxji-she-ding-wang-lu.html" rel="alternate"></link><published>2017-06-22T23:20:54+08:00</published><updated>2017-06-22T23:20:54+08:00</updated><author><name>40523126</name></author><id>tag:,2017-06-22:./zai-ubuntu1604zhong-an-zhuang-nginxji-she-ding-wang-lu.html</id><summary type="html">&lt;p&gt;安裝完Ubuntu後,需要建立網路,才能夠上網.&lt;/p&gt;
+另一頭 = 白綠、綠、白橙、藍、白藍、橙、白棕、棕&lt;/p&gt;</summary></entry><entry><title>如何設定ipv6網路</title><link href="./ru-he-she-ding-ipv6wang-lu.html" rel="alternate"></link><published>2017-06-23T03:44:36+08:00</published><updated>2017-06-23T03:44:36+08:00</updated><author><name>40523126</name></author><id>tag:,2017-06-23:./ru-he-she-ding-ipv6wang-lu.html</id><summary type="html">&lt;p&gt;進入網路共用中心之後,點開乙太網路內容,將第四版的Ipv4先關掉,將第六版的Ipv6開啟,
+點開DNS伺服器慣用DNS伺服器:輸入學校的IPV6 IP,其他DNS伺服器:中華電信的IPV6 IP,
+之後點開Proxy設定&amp;gt;Lan設定,Proxy輸入學校的Ipv6網址,連接阜輸入3128&amp;gt;連線成功。&lt;/p&gt;</summary></entry><entry><title>如何設定ipv6網路</title><link href="./ru-he-she-ding-ipv6wang-lu.html" rel="alternate"></link><published>2017-06-23T03:44:36+08:00</published><updated>2017-06-23T03:44:36+08:00</updated><author><name>40523126</name></author><id>tag:,2017-06-23:./ru-he-she-ding-ipv6wang-lu.html</id><summary type="html">&lt;p&gt;進入網路共用中心之後,點開乙太網路內容,將第四版的Ipv4先關掉,將第六版的Ipv6開啟,
+點開DNS伺服器慣用DNS伺服器:輸入學校的IPV6 IP,其他DNS伺服器:中華電信的IPV6 IP,
+之後點開Proxy設定&amp;gt;Lan設定,Proxy輸入學校的Ipv6網址,連接阜輸入3128&amp;gt;連線成功。&lt;/p&gt;</summary></entry><entry><title>在Ubuntu16.04中安裝nginx及設定網路</title><link href="./zai-ubuntu1604zhong-an-zhuang-nginxji-she-ding-wang-lu.html" rel="alternate"></link><published>2017-06-22T23:20:54+08:00</published><updated>2017-06-22T23:20:54+08:00</updated><author><name>40523126</name></author><id>tag:,2017-06-22:./zai-ubuntu1604zhong-an-zhuang-nginxji-she-ding-wang-lu.html</id><summary type="html">&lt;p&gt;安裝完Ubuntu後,需要建立網路,才能夠上網.&lt;/p&gt;
 &lt;p&gt;首先開啟Ubuntu主機後,輸入:sudo apt update之後&lt;/p&gt;
 &lt;p&gt;再輸入sudo apt install nginx 建立一個網站&lt;/p&gt;
 &lt;p&gt;之後輸入ifconfig 會出現ip ,進而去瀏覽器輸入網址&lt;/p&gt;

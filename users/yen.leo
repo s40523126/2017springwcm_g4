@@ -53,10 +53,9 @@
 <v t="amd.20151216001126.1"><vh>md 檔案範例</vh></v>
 <v t="leo.20170428004130.1"><vh></vh></v>
 <v t="amd.20151215170031.1" a="E"><vh>@path ./../content</vh>
-<v t="amd.20160106093454.1"><vh>yen 所寫的網誌文章</vh></v>
+<v t="leo.20170623041657.1"><vh>@edit 20170621.md</vh></v>
 <v t="leo.20170428004252.1"><vh>@edit 20170428.md</vh></v>
-<v t="leo.20170623034225.1"><vh>@edit 20170623.md</vh></v>
-<v t="leo.20170623034617.1"><vh>@edit 20170622.md</vh></v>
+<v t="leo.20170623034225.1"><vh>@edit 20170622.md</vh></v>
 </v>
 <v t="leo.20170428004003.1"><vh>@button https server</vh></v>
 <v t="leo.20170623034230.1"><vh>newHeadline</vh></v>
@@ -91,7 +90,6 @@ Author: yen
 &lt;pre class="brush: python;"&gt;
 print("hello")
 &lt;/pre&gt;</t>
-<t tx="amd.20160106093454.1"></t>
 <t tx="amd.20160106095324.1"></t>
 <t tx="amd.20160921213353.1"></t>
 <t tx="leo.20151212173315.1"></t>
