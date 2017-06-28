@@ -1,17 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>2017springwcm_g4 (虎尾科大MDE)</title><link href="./" rel="alternate"></link><link href="./feeds/all.atom.xml" rel="self"></link><id>./</id><updated>2017-06-23T05:34:51+08:00</updated><entry><title>利用Fossil SCM管理Mp4檔案</title><link href="./li-yong-fossil-scmguan-li-mp4dang-an.html" rel="alternate"></link><published>2017-06-23T05:34:51+08:00</published><updated>2017-06-23T05:34:51+08:00</updated><author><name>40523126</name></author><id>tag:,2017-06-23:./li-yong-fossil-scmguan-li-mp4dang-an.html</id><summary type="html">&lt;p&gt;mkdir fossil
+<feed xmlns="http://www.w3.org/2005/Atom"><title>2017springwcm_g4 (虎尾科大MDE)</title><link href="./" rel="alternate"></link><link href="./feeds/all.atom.xml" rel="self"></link><id>./</id><updated>2017-06-28T19:52:33+08:00</updated><entry><title>組裝主機(實體機)</title><link href="./zu-zhuang-zhu-ji-shi-ti-ji.html" rel="alternate"></link><published>2017-06-28T19:52:33+08:00</published><updated>2017-06-28T19:52:33+08:00</updated><author><name>40523126</name></author><id>tag:,2017-06-28:./zu-zhuang-zhu-ji-shi-ti-ji.html</id><summary type="html">&lt;p&gt;拆開主機板後的畫面如下:
+http://imgur.com/a/2QCuX
+首先拔出復活卡以及記憶體,
+將另一台電腦的Ram合成一體
+硬碟也裝到另一台
+之後拔完電池,把硬碟接電源,
+http://imgur.com/a/5fPx7
+https://screenshot.net/tw/97g5eij&lt;/p&gt;</summary></entry><entry><title>利用Ubuntu16.04建立nginx(補成功影片)</title><link href="./li-yong-ubuntu1604jian-li-nginxbu-cheng-gong-ying-pian.html" rel="alternate"></link><published>2017-06-28T19:42:56+08:00</published><updated>2017-06-28T19:42:56+08:00</updated><author><name>40523126</name></author><id>tag:,2017-06-28:./li-yong-ubuntu1604jian-li-nginxbu-cheng-gong-ying-pian.html</id><summary type="html">&lt;p&gt;進入Ubunto伺服器以後
+先輸入sudo apt update
+再來sudo apt install nginx
+輸入inconfig確認IP位置
+正常為http://192.168.1.xx/
+有出現表示建立成功&lt;/p&gt;
+&lt;iframe src="https://player.vimeo.com/video/223438038" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;a href="https://vimeo.com/223438038"&gt;bandicam 2017-06-28 18-49-28-651&lt;/a&gt; from &lt;a href="https://vimeo.com/user57302706"&gt;James Chang&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>利用Fossil SCM管理Mp4檔案</title><link href="./li-yong-fossil-scmguan-li-mp4dang-an.html" rel="alternate"></link><published>2017-06-23T05:34:51+08:00</published><updated>2017-06-23T05:34:51+08:00</updated><author><name>40523126</name></author><id>tag:,2017-06-23:./li-yong-fossil-scmguan-li-mp4dang-an.html</id><summary type="html">&lt;p&gt;mkdir fossil
 cd fossil
-fossil clone https://自己學號@/mde2a2.kmol.info/wcmg4/index wcm4
-然後就會出現password for 自己學號:??????
-之後問的y/n,都輸入y
-之後再mkdir wd
-cd wd
-fossil open ./../wcm4
-之後把要clone的所有影片複製到wd裡面有_FOSSIL_檔案的再一起
-fossil add .
-fossil commit -m "add new mp4 
-之後問的都輸入y
-檢查https://mde2a2.kmol.info/wcmg4/tree裡面是否有成功。&lt;/p&gt;</summary></entry><entry><title>網路線的製作方法</title><link href="./wang-lu-xian-de-zhi-zuo-fang-fa.html" rel="alternate"></link><published>2017-06-23T05:30:30+08:00</published><updated>2017-06-23T05:30:30+08:00</updated><author><name>40523126</name></author><id>tag:,2017-06-23:./wang-lu-xian-de-zhi-zuo-fang-fa.html</id><summary type="html">&lt;p&gt;工具:
+&lt;p&gt;fossil clone https://自己學號@/mde2a2.kmol.info/wcmg4/index wcm4&lt;/p&gt;
+&lt;p&gt;然後就會出現password for 自己學號:??????&lt;/p&gt;
+&lt;p&gt;之後問的y/n,都輸入y&lt;/p&gt;
+&lt;p&gt;之後再mkdir wd&lt;/p&gt;
+&lt;p&gt;cd wd&lt;/p&gt;
+&lt;p&gt;fossil open ./../wcm4&lt;/p&gt;
+&lt;p&gt;之後把要clone的所有影片複製到wd裡面有_FOSSIL_檔案的再一起&lt;/p&gt;
+&lt;p&gt;fossil add .&lt;/p&gt;
+&lt;p&gt;fossil commit -m "add new mp4 &lt;/p&gt;
+&lt;p&gt;之後問的都輸入y&lt;/p&gt;
+&lt;p&gt;檢查https://mde2a2.kmol.info/wcmg4/tree裡面是否有成功。&lt;/p&gt;&lt;/p&gt;</summary></entry><entry><title>網路線的製作方法</title><link href="./wang-lu-xian-de-zhi-zuo-fang-fa.html" rel="alternate"></link><published>2017-06-23T05:30:30+08:00</published><updated>2017-06-23T05:30:30+08:00</updated><author><name>40523126</name></author><id>tag:,2017-06-23:./wang-lu-xian-de-zhi-zuo-fang-fa.html</id><summary type="html">&lt;p&gt;工具:
 RJ-45 壓線鉗
 剝線工具 (剝線鉗或美工刀)
 斜口鉗

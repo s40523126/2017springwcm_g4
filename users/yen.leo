@@ -52,7 +52,10 @@
 <v t="amd.20151215170350.1"><vh>以下為 content 目錄中的 md 檔案</vh></v>
 <v t="amd.20151216001126.1"><vh>md 檔案範例</vh></v>
 <v t="amd.20151215170031.1" a="E"><vh>@path ./../content</vh>
+<v t="leo.20170628194545.1"><vh>@edit 20170628.md</vh></v>
+<v t="leo.20170628193456.1"><vh>@edit 20170627.md</vh></v>
 <v t="leo.20170623060618.1"><vh>@edit 20170623.md</vh></v>
+<v t="leo.20170628193511.1"><vh>newHeadline</vh></v>
 <v t="leo.20170623055918.1"><vh>@edit 20170622.md</vh></v>
 <v t="leo.20170623053132.1" a="E"><vh>@auto Y:/123/2017springwcm_hw/content/20170428.md</vh></v>
 <v t="leo.20170623053231.1" a="E"><vh>@auto Y:/123/2017springwcm_hw/content/20170621.md</vh></v>
@@ -196,5 +199,6 @@ PLUGINS = ['liquid_tags.notebook', 'summary']
 <t tx="leo.20151213230957.1"># 設定網誌以 md 檔案建立的 file system date 為準, 無需自行設定
 
 DEFAULT_DATE = 'fs'</t>
+<t tx="leo.20170628193511.1"></t>
 </tnodes>
 </leo_file>
