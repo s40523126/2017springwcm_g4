@@ -275,6 +275,133 @@ init_mathjax();
         <div class="col-sm-9">
 
             <article>
+                <h2><a href="../12tyu-12tliang-chi-nie-he-dong-tai-hui-tu.html">12t與12t兩齒嚙合動態繪圖</a></h2>
+                <div class="summary"><!-- 導入 Brython 標準程式庫 -->
+
+<script src="../data/Brython-3.3.1/brython.js"></script>
+
+<script src="../data/Brython-3.3.1/brython_stdlib.js"></script>
+
+<!-- 啟動 Brython -->
+
+<script>
+window.onload=function(){
+// 設定 data/py 為共用程式路徑
+brython({debug:1, pythonpath:['./../data/py']});
+}
+</script>
+
+<!-- 以下處理 Cango Spur Gear -->
+
+<!-- Cango 程式庫 -->
+
+<script type="text/javascript" src="./../data/w11/cango
+/Cango-9v05-min.js"></script>
+
+<script type="text/javascript" src="./../data/w11/cango
+/CangoAxes-2v09.js"></script>
+
+<script type="text/javascript" src="./../data/w11/cango
+/CangoAnimation-5v00.js"></script>
+
+<script type="text/javascript" src="./../data/w11/cango
+/gearUtils-05.js"></script>
+
+<canvas id='cango_gear' width='1200' height='800'></canvas>
+
+<script type="text/python">
+# 將 導入的 document 設為 doc 主要原因在於與舊程式碼相容
+from browser import document as doc
+# 由於 Python3 與 Javascript 程式碼已經不再混用, 因此來自 Javascript 的變數, 必須居中透過 window 物件轉換
+from browser import window
+import math
+
+# 主要用來取得畫布大小
+canvas = doc["cango_gear"]
+# 此程式採用 Cango Javascript 程式庫繪圖 …</script>
+                    <a class="btn btn-default btn-xs" href="../12tyu-12tliang-chi-nie-he-dong-tai-hui-tu.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="../jian-kai-xian-zheng-chi-lun-lun-kuo-wai-xing.html">漸開線正齒輪輪廓外型</a></h2>
+                <div class="summary"><p>16t 齒輪
+<!-- 導入 Brython 標準程式庫 -->
+<script type="text/javascript" 
+    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js">
+</script>
+<!-- 啟動 Brython --></p>
+<script>
+window.onload=function(){
+// 設定 data/py 為共用程式路徑
+brython({debug:1, pythonpath:['./../data/py']});
+}
+</script>
+
+<!-- 以下實際利用  Brython 繪圖-->
+
+<canvas id="onegear" width="800" height="600"></canvas>
+
+<div id="onegear_div" width="800" height="20"></div>
+
+<script type="text/python3">
+from browser import document as doc
+import math
+# deg 為角度轉為徑度的轉換因子
+deg = math.pi/180.
+# 定義 Spur 類別
+class Spur(object):
+    def __init__(self, ctx):
+        self.ctx = ctx
+
+    def create_line(self, x1, y1, x2, y2, width …</script>
+                    <a class="btn btn-default btn-xs" href="../jian-kai-xian-zheng-chi-lun-lun-kuo-wai-xing.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="../50t-yu-25t-de-chi-lun-nie-he-jing-tai-lun-kuo-tu.html">50t 與 25t 的齒輪嚙合靜態輪廓圖</a></h2>
+                <div class="summary"><!-- 導入 Brython 標準程式庫 -->
+
+<script type="text/javascript" 
+    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js">
+</script>
+
+<!-- 啟動 Brython -->
+
+<script type="text/javascript" src="https://brython.info/src/brython_dist.js"></script>
+
+<script type="text/javascript" src="https://2015fallhw.github.io/cptocadp/static/Cango-8v03.js"></script>
+
+<script type="text/javascript" src="https://2015fallhw.github.io/cptocadp/static/Cango2D-7v01-min.js"></script>
+
+<script type="text/javascript" src="https://2015fallhw.github.io/cptocadp/static/gearUtils-05.js"></script>
+
+<script>
+window.onload=function(){
+brython(1);
+}
+</script>
+
+<canvas id='gear1' width='800' height='750'></canvas>
+
+<script type="text/python">
+# 將 導入的 document 設為 doc 主要原因在於與舊程式碼相容
+from browser import document as doc
+# 由於 Python3 與 Javascript 程式碼已經不再混用, 因此來自 Javascript 的變數, 必須居中透過 window 物件轉換
+from browser import window
+# 針對 Javascript 既有的物件, 則必須透過 JSConstructor 轉換
+from javascript import JSConstructor
+import math
+
+# 主要用來取得畫布大小
+canvas = doc["gear1"]
+# 此程式採用 Cango …</script>
+                    <a class="btn btn-default btn-xs" href="../50t-yu-25t-de-chi-lun-nie-he-jing-tai-lun-kuo-tu.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="../wang-lu-xian-de-zhi-zuo-fang-fa.html">網路線的製作方法</a></h2>
                 <div class="summary"><!-- 導入 Brython 標準程式庫 -->
 
@@ -357,35 +484,6 @@ def background(x, y, xinc, yinc, xnum, ynum, ctx):
             </article>
             <hr/>
             <article>
-                <h2><a href="../zu-zhuang-zhu-ji-shi-ti-ji.html">組裝主機(實體機)</a></h2>
-                <div class="summary"><p>拆開主機板後的畫面如下:
-http://imgur.com/a/2QCuX
-首先拔出復活卡以及記憶體,
-將另一台電腦的Ram合成一體
-硬碟也裝到另一台
-之後拔完電池,把硬碟接電源,
-http://imgur.com/a/5fPx7
-https://screenshot.net/tw/97g5eij</p>
-                    <a class="btn btn-default btn-xs" href="../zu-zhuang-zhu-ji-shi-ti-ji.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="../li-yong-ubuntu1604jian-li-nginxbu-cheng-gong-ying-pian.html">利用Ubuntu16.04建立nginx(補成功影片)</a></h2>
-                <div class="summary"><p>進入Ubunto伺服器以後
-先輸入sudo apt update
-再來sudo apt install nginx
-輸入inconfig確認IP位置
-正常為http://192.168.1.xx/
-有出現表示建立成功</p>
-<iframe src="https://player.vimeo.com/video/223438038" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-<p><a href="https://vimeo.com/223438038">bandicam 2017-06-28 18-49-28-651</a> from <a href="https://vimeo.com/user57302706">James Chang</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-                    <a class="btn btn-default btn-xs" href="../li-yong-ubuntu1604jian-li-nginxbu-cheng-gong-ying-pian.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
                 <h2><a href="../ru-he-she-ding-ipv6wang-lu.html">如何設定ipv6網路</a></h2>
                 <div class="summary"><p>進入網路共用中心之後,點開乙太網路內容,將第四版的Ipv4先關掉,將第六版的Ipv6開啟,
 點開DNS伺服器慣用DNS伺服器:輸入學校的IPV6 IP,其他DNS伺服器:中華電信的IPV6 IP,
@@ -419,6 +517,21 @@ https://screenshot.net/tw/97g5eij</p>
             <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
                 <ul class="list-group" id="recentposts">
                     <li class="list-group-item">
+                        <a href="../12tyu-12tliang-chi-nie-he-dong-tai-hui-tu.html">
+                            12t與12t兩齒嚙合動態繪圖
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="../jian-kai-xian-zheng-chi-lun-lun-kuo-wai-xing.html">
+                            漸開線正齒輪輪廓外型
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="../50t-yu-25t-de-chi-lun-nie-he-jing-tai-lun-kuo-tu.html">
+                            50t 與 25t 的齒輪嚙合靜態輪廓圖
+                        </a>
+                    </li>
+                    <li class="list-group-item">
                         <a href="../wang-lu-xian-de-zhi-zuo-fang-fa.html">
                             網路線的製作方法
                         </a>
@@ -426,21 +539,6 @@ https://screenshot.net/tw/97g5eij</p>
                     <li class="list-group-item">
                         <a href="../li-yong-fossil-scmguan-li-mp4dang-an.html">
                             利用Fossil SCM管理Mp4檔案...
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="../zu-zhuang-zhu-ji-shi-ti-ji.html">
-                            組裝主機(實體機)
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="../li-yong-ubuntu1604jian-li-nginxbu-cheng-gong-ying-pian.html">
-                            利用Ubuntu16.04建立nginx(補成功影片)
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="../ru-he-she-ding-ipv6wang-lu.html">
-                            如何設定ipv6網路
                         </a>
                     </li>
                 </ul>
