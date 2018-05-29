@@ -275,6 +275,40 @@ init_mathjax();
         <div class="col-sm-9">
 
             <article>
+                <h2><a href="./li-yong-fossil-scmguan-li-mp4dang-an.html">利用Fossil SCM管理Mp4檔案...</a></h2>
+                <div class="summary"><!-- 啟動 Brython -->
+
+<script>
+window.onload=function(){
+brython(1);
+}
+</script>
+
+<!-- 以下實際利用  Brython 畫圖 -->
+
+<canvas id="chord1" width="600" height="400"></canvas>
+
+<script type="text/python3">
+from browser import document as doc
+import math
+# 準備繪圖畫布
+canvas = doc["chord1"]
+ctx = canvas.getContext("2d")
+
+def background(x, y, xinc, yinc, xnum, ynum, ctx):
+    # 水平線
+    for i in range(ynum+1):
+        ctx.beginPath()
+    # 設定線的寬度為 1 個單位
+        if i == 0:
+            ctx.lineWidth = 7
+        else:
+            ctx …</script>
+                    <a class="btn btn-default btn-xs" href="./li-yong-fossil-scmguan-li-mp4dang-an.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="./zu-zhuang-zhu-ji-shi-ti-ji.html">組裝主機(實體機)</a></h2>
                 <div class="summary"><p>拆開主機板後的畫面如下:
 http://imgur.com/a/2QCuX
@@ -285,25 +319,6 @@ http://imgur.com/a/2QCuX
 http://imgur.com/a/5fPx7
 https://screenshot.net/tw/97g5eij</p>
                     <a class="btn btn-default btn-xs" href="./zu-zhuang-zhu-ji-shi-ti-ji.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="./li-yong-fossil-scmguan-li-mp4dang-an.html">利用Fossil SCM管理Mp4檔案</a></h2>
-                <div class="summary"><p>mkdir fossil
-cd fossil
-<p>fossil clone https://自己學號@/mde2a2.kmol.info/wcmg4/index wcm4</p>
-<p>然後就會出現password for 自己學號:??????</p>
-<p>之後問的y/n,都輸入y</p>
-<p>之後再mkdir wd</p>
-<p>cd wd</p>
-<p>fossil open ./../wcm4</p>
-<p>之後把要clone的所有影片複製到wd裡面有_FOSSIL_檔案的再一起</p>
-<p>fossil add .</p>
-<p>fossil commit -m "add new mp4 </p>
-<p>之後問的都輸入y</p>
-<p>檢查https://mde2a2.kmol.info/wcmg4/tree裡面是否有成功。</p></p>
-                    <a class="btn btn-default btn-xs" href="./li-yong-fossil-scmguan-li-mp4dang-an.html">more ...</a>
                 </div>
             </article>
             <hr/>
@@ -381,13 +396,13 @@ RJ-45 接頭
             <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
                 <ul class="list-group" id="recentposts">
                     <li class="list-group-item">
-                        <a href="./zu-zhuang-zhu-ji-shi-ti-ji.html">
-                            組裝主機(實體機)
+                        <a href="./li-yong-fossil-scmguan-li-mp4dang-an.html">
+                            利用Fossil SCM管理Mp4檔案...
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="./li-yong-fossil-scmguan-li-mp4dang-an.html">
-                            利用Fossil SCM管理Mp4檔案
+                        <a href="./zu-zhuang-zhu-ji-shi-ti-ji.html">
+                            組裝主機(實體機)
                         </a>
                     </li>
                     <li class="list-group-item">
