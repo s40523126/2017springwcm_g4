@@ -57,8 +57,6 @@
 <v t="leo.20170628193456.1"><vh>@edit 20170627.md</vh></v>
 <v t="leo.20170623060618.1"><vh>@edit 20170623.md</vh></v>
 <v t="leo.20170623055918.1"><vh>@edit 20170622.md</vh></v>
-<v t="leo.20170623053132.1"><vh>@auto Y:/123/2017springwcm_hw/content/20170428.md</vh></v>
-<v t="leo.20170623053231.1"><vh>@auto Y:/123/2017springwcm_hw/content/20170621.md</vh></v>
 </v>
 </vnodes>
 <tnodes>
