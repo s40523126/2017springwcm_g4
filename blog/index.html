@@ -275,6 +275,48 @@ init_mathjax();
         <div class="col-sm-9">
 
             <article>
+                <h2><a href="./wang-lu-xian-de-zhi-zuo-fang-fa.html">網路線的製作方法</a></h2>
+                <div class="summary"><!-- 導入 Brython 標準程式庫 -->
+
+<script type="text/javascript" 
+    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js">
+</script>
+
+<!-- 啟動 Brython -->
+
+<script>
+window.onload=function(){
+// 設定 data/py 為共用程式路徑
+brython({debug:1, pythonpath:['./../data/py']});
+}
+</script>
+
+<canvas id="onegear" width="800" height="600"></canvas>
+
+<div id="onegear_div" width="800" height="20"></div>
+
+<p><input id="n1" value="13"></input><br />
+<input id="n2" value="11"></input><br />
+<input id="n3" value="17"></input><br />
+<button id="button">Set Number of Gears</button></p>
+
+<script type="text/python3">
+from browser import document as doc
+from browser import html
+import math
+# deg 為角度轉為徑度的轉換因子
+deg = math.pi/180.
+# 定義 Spur 類別
+class Spur(object):
+    def __init__(self, ctx):
+        self.ctx = ctx
+
+    def create_line …</script>
+                    <a class="btn btn-default btn-xs" href="./wang-lu-xian-de-zhi-zuo-fang-fa.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="./50t-yu-25t-de-chi-lun-nie-he-jing-tai-lun-kuo-tu.html">50t 與 25t 的齒輪嚙合靜態輪廓圖</a></h2>
                 <div class="summary"><!-- 導入 Brython 標準程式庫 -->
 
@@ -442,48 +484,6 @@ def background(x, y, xinc, yinc, xnum, ynum, ctx):
             </article>
             <hr/>
             <article>
-                <h2><a href="./wang-lu-xian-de-zhi-zuo-fang-fa.html">網路線的製作方法</a></h2>
-                <div class="summary"><!-- 導入 Brython 標準程式庫 -->
-
-<script type="text/javascript" 
-    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js">
-</script>
-
-<!-- 啟動 Brython -->
-
-<script>
-window.onload=function(){
-// 設定 data/py 為共用程式路徑
-brython({debug:1, pythonpath:['./../data/py']});
-}
-</script>
-
-<canvas id="onegear" width="800" height="600"></canvas>
-
-<div id="onegear_div" width="800" height="20"></div>
-
-<p><input id="n1" value="13"></input><br />
-<input id="n2" value="11"></input><br />
-<input id="n3" value="17"></input><br />
-<button id="button">Set Number of Gears</button></p>
-
-<script type="text/python3">
-from browser import document as doc
-from browser import html
-import math
-# deg 為角度轉為徑度的轉換因子
-deg = math.pi/180.
-# 定義 Spur 類別
-class Spur(object):
-    def __init__(self, ctx):
-        self.ctx = ctx
-
-    def create_line …</script>
-                    <a class="btn btn-default btn-xs" href="./wang-lu-xian-de-zhi-zuo-fang-fa.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
                 <h2><a href="./ru-he-she-ding-ipv6wang-lu.html">如何設定ipv6網路</a></h2>
                 <div class="summary"><p>進入網路共用中心之後,點開乙太網路內容,將第四版的Ipv4先關掉,將第六版的Ipv6開啟,
 點開DNS伺服器慣用DNS伺服器:輸入學校的IPV6 IP,其他DNS伺服器:中華電信的IPV6 IP,
@@ -517,6 +517,11 @@ class Spur(object):
             <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
                 <ul class="list-group" id="recentposts">
                     <li class="list-group-item">
+                        <a href="./wang-lu-xian-de-zhi-zuo-fang-fa.html">
+                            網路線的製作方法
+                        </a>
+                    </li>
+                    <li class="list-group-item">
                         <a href="./50t-yu-25t-de-chi-lun-nie-he-jing-tai-lun-kuo-tu.html">
                             50t 與 25t 的齒輪嚙合靜態輪廓圖
                         </a>
@@ -534,11 +539,6 @@ class Spur(object):
                     <li class="list-group-item">
                         <a href="./li-yong-fossil-scmguan-li-mp4dang-an.html">
                             利用Fossil SCM管理Mp4檔案...
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="./wang-lu-xian-de-zhi-zuo-fang-fa.html">
-                            網路線的製作方法
                         </a>
                     </li>
                 </ul>
